@@ -39,6 +39,13 @@ class Cjmp extends Component {
     color4: none,
     color5: none,
     color6: none,
+    inputValue2: '',
+  };
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
   };
 
   changeColor = (color1, color2, color3, color4, color5, color6) => {
@@ -105,21 +112,40 @@ class Cjmp extends Component {
   };
 
   render() {
-    const { color1, color2, color3, color4, color5, color6 } = this.state;
+    const {
+      color1,
+      color2,
+      color3,
+      color4,
+      color5,
+      color6,
+      inputValue2,
+    } = this.state;
     return (
       <div className={s.ty}>
         <form>
           <input
             className={s.ty2}
+            placeholder="Chandan"
             style={{
               borderTop: '0px',
               borderLeft: '0px',
               borderRight: '0px',
               borderColor: color1,
             }}
+            value={inputValue2}
+            onChange={this.handleChange}
+            type="text"
+            minLength="2"
+            maxLength="50"
+            name="inputValue2"
+            pattern="^[a-zA-Z]+$"
+            required
           />
           <input
             className={s.ty3}
+            placeholder="Chandan"
+            type="text"
             style={{
               borderTop: '0px',
               borderLeft: '0px',
