@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Select from 'react-select';
 import s from './mmm.module.css';
 
 // const Cjmp = ({ butPrev, butNext }) => {
@@ -30,16 +31,32 @@ import s from './mmm.module.css';
 
 const green = '#39D1B4';
 const none = '#FFFFFF';
+const grey = '#A9A9A9';
+const options = [
+  { value: 'India', label: 'India' },
+  { value: 'Ukraine', label: 'Ukraine' },
+  { value: 'France', label: 'France' },
+  { value: 'UK', label: 'UK' },
+];
+
+const findOpt = value => options.find(opt => opt.value === value);
 
 class Cjmp extends Component {
   state = {
     color1: green,
+    colorText1: green,
     color2: none,
+    colorText2: grey,
     color3: none,
+    colorText3: grey,
     color4: none,
+    colorText4: grey,
     color5: none,
     color6: none,
     inputValue2: '',
+    inputValue3: '',
+    selectData: '',
+    inputValue4: '',
   };
 
   handleChange = e => {
@@ -48,13 +65,34 @@ class Cjmp extends Component {
     });
   };
 
-  changeColor = (color1, color2, color3, color4, color5, color6) => {
+  onChangeSelect = opt => {
+    this.setState({
+      selectData: opt.value,
+    });
+  };
+
+  changeColor = (
+    color1,
+    colorText1,
+    color2,
+    colorText2,
+    color3,
+    colorText3,
+    color4,
+    colorText4,
+    color5,
+    color6,
+  ) => {
     if (this.state.color1 !== none) {
       this.setState({
         color1: none,
+        colorText1: grey,
         color2: green,
+        colorText2: green,
         color3: none,
+        colorText3: grey,
         color4: none,
+        colorText4: grey,
         color5: none,
         color6: none,
       });
@@ -62,9 +100,13 @@ class Cjmp extends Component {
     if (this.state.color2 !== none) {
       this.setState({
         color1: none,
+        colorText1: grey,
         color2: none,
+        colorText2: grey,
         color3: green,
+        colorText3: green,
         color4: none,
+        colorText4: grey,
         color5: none,
         color6: none,
       });
@@ -72,9 +114,13 @@ class Cjmp extends Component {
     if (this.state.color3 !== none) {
       this.setState({
         color1: none,
+        colorText1: grey,
         color2: none,
+        colorText2: grey,
         color3: none,
+        colorText3: grey,
         color4: green,
+        colorText4: green,
         color5: none,
         color6: none,
       });
@@ -82,9 +128,13 @@ class Cjmp extends Component {
     if (this.state.color4 !== none) {
       this.setState({
         color1: none,
+        colorText1: grey,
         color2: none,
+        colorText2: grey,
         color3: none,
+        colorText3: grey,
         color4: none,
+        colorText4: grey,
         color5: green,
         color6: none,
       });
@@ -92,9 +142,13 @@ class Cjmp extends Component {
     if (this.state.color5 !== none) {
       this.setState({
         color1: none,
+        colorText1: grey,
         color2: none,
+        colorText2: grey,
         color3: none,
+        colorText3: grey,
         color4: none,
+        colorText4: grey,
         color5: none,
         color6: green,
       });
@@ -102,9 +156,13 @@ class Cjmp extends Component {
     if (this.state.color6 !== none) {
       this.setState({
         color1: none,
+        colorText1: grey,
         color2: none,
+        colorText2: grey,
         color3: none,
+        colorText3: grey,
         color4: none,
+        colorText4: grey,
         color5: none,
         color6: none,
       });
@@ -114,16 +172,26 @@ class Cjmp extends Component {
   render() {
     const {
       color1,
+      colorText1,
       color2,
+      colorText2,
       color3,
+      colorText3,
       color4,
+      colorText4,
       color5,
       color6,
       inputValue2,
+      inputValue3,
+      selectData,
+      inputValue4,
     } = this.state;
     return (
       <div className={s.ty}>
         <form>
+          <p className={s.tyP2} style={{ color: colorText1 }}>
+            First Name
+          </p>
           <input
             className={s.ty2}
             placeholder="Chandan"
@@ -139,12 +207,15 @@ class Cjmp extends Component {
             minLength="2"
             maxLength="50"
             name="inputValue2"
-            pattern="^[a-zA-Z]+$"
+            pattern="[а-яёА-ЯЁ]+"
             required
           />
+          <p className={s.tyP3} style={{ color: colorText2 }}>
+            Email ID
+          </p>
           <input
             className={s.ty3}
-            placeholder="Chandan"
+            placeholder="chandan@codias.com"
             type="text"
             style={{
               borderTop: '0px',
@@ -152,15 +223,44 @@ class Cjmp extends Component {
               borderRight: '0px',
               borderColor: color2,
             }}
+            value={inputValue3}
+            onChange={this.handleChange}
+            maxLength="250"
+            name="inputValue3"
+            pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$"
+            required
           />
+          <p className={s.tyP4} style={{ color: colorText3 }}>
+            Country
+          </p>
+          <Select
+            required
+            className={s.select}
+            options={options}
+            value={findOpt(selectData)}
+            onChange={this.onChangeSelect}
+            style={{
+              border: none,
+            }}
+          />
+          <p className={s.tyP4} style={{ color: colorText4 }}>
+            Phone Number
+          </p>
           <input
             className={s.ty4}
+            placeholder="380..."
             style={{
               borderTop: '0px',
               borderLeft: '0px',
               borderRight: '0px',
-              borderColor: color3,
+              borderColor: color4,
             }}
+            value={inputValue4}
+            onChange={this.handleChange}
+            type="tel"
+            name="inputValue4"
+            pattern="380[0-9]{9}"
+            required
           />
           <input
             className={s.ty5}

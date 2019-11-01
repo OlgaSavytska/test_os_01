@@ -52,10 +52,31 @@ input:hover::-ms-input-placeholder {
     color: black;
 }
 
-.form input:valid:not(:placeholder-shown) {
+input:valid:not(:focus):not(:placeholder-shown) {
     color: #94cf4b;
 }
 
-.form input:invalid:not(:placeholder-shown) {
+input:invalid:not(:focus):not(:placeholder-shown) {
     color: #ff3561;
+}
+
+/* .select {
+    margin: 50px;
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 0px solid #CCC;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+} */
+
+
+/* CAUTION: Internet Explorer hackery ahead */
+
+
+select::-ms-expand {
+    display: none;
 }
