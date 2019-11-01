@@ -32,6 +32,7 @@ import s from './mmm.module.css';
 const green = '#39D1B4';
 const none = '#FFFFFF';
 const grey = '#A9A9A9';
+
 const options = [
   { value: 'India', label: 'India' },
   { value: 'Ukraine', label: 'Ukraine' },
@@ -74,6 +75,7 @@ class Cjmp extends Component {
   changeColor = (
     color1,
     colorText1,
+    focus1,
     color2,
     colorText2,
     color3,

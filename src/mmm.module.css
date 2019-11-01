@@ -60,6 +60,14 @@ input:invalid:not(:focus):not(:placeholder-shown) {
     color: #ff3561;
 }
 
+input:valid:not(:focus):not(:placeholder-shown)~label {
+    top: 20px;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown)~label {
+    top: 20px;
+}
+
 /* .select {
     margin: 50px;
     width: 150px;
