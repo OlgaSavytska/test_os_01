@@ -192,24 +192,30 @@ class Cjmp extends Component {
           <p className={s.tyP2} style={{ color: colorText1 }}>
             First Name
           </p>
-          <input
-            className={s.ty2}
-            placeholder="Chandan"
-            style={{
-              borderTop: '0px',
-              borderLeft: '0px',
-              borderRight: '0px',
-              borderColor: color1,
-            }}
-            value={inputValue2}
-            onChange={this.handleChange}
-            type="text"
-            minLength="2"
-            maxLength="50"
-            name="inputValue2"
-            pattern="[а-яёА-ЯЁ]+"
-            required
-          />
+          <div className="s.form-group">
+            <input
+              className={s.ty2}
+              placeholder="Chandan"
+              style={{
+                borderTop: '0px',
+                borderLeft: '0px',
+                borderRight: '0px',
+                borderColor: color1,
+              }}
+              value={inputValue2}
+              onChange={this.handleChange}
+              type="text"
+              minLength="2"
+              maxLength="50"
+              name="inputValue2"
+              pattern="[а-яёА-ЯЁ]+"
+              id="dynamic-label-input"
+              required
+            />
+            <label htmlFor="dynamic-label-input" style={{ color: colorText1 }}>
+              Enter some text
+            </label>
+          </div>
           <p className={s.tyP3} style={{ color: colorText2 }}>
             Email ID
           </p>

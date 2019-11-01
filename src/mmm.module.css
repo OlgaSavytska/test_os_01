@@ -80,3 +80,21 @@ input:invalid:not(:focus):not(:placeholder-shown) {
 select::-ms-expand {
     display: none;
 }
+
+.form-group {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+label {
+    position: absolute;
+    top: 48px;
+    left: 1px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+input:focus~label {
+    top: 20px;
+}
