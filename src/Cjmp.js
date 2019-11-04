@@ -194,14 +194,11 @@ class Cjmp extends Component {
     return (
       <div className={s.ty}>
         <form>
-          <p className={s.tyP2} style={{ color: colorText1 }}>
-            First Name
-          </p>
-          <div className="s.form-group">
+          <div className={s.form_group}>
             <input
               className={s.ty2}
               ref="myInput2"
-              placeholder="Chandan"
+              placeholder=" "
               style={{
                 borderTop: '0px',
                 borderLeft: '0px',
@@ -220,30 +217,32 @@ class Cjmp extends Component {
               autoFocus
             />
             <label htmlFor="dynamic-label-input" style={{ color: colorText1 }}>
-              Enter some text
+              First name
             </label>
           </div>
-          <p className={s.tyP3} style={{ color: colorText2 }}>
-            Email ID
-          </p>
-          <input
-            className={s.ty3}
-            placeholder="chandan@codias.com"
-            type="text"
-            ref="myInput3"
-            style={{
-              borderTop: '0px',
-              borderLeft: '0px',
-              borderRight: '0px',
-              borderColor: color2,
-            }}
-            value={inputValue3}
-            onChange={this.handleChange}
-            maxLength="250"
-            name="inputValue3"
-            pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$"
-            required
-          />
+          <div className={s.form_group}>
+            <input
+              className={s.ty3}
+              placeholder=" "
+              type="text"
+              ref="myInput3"
+              style={{
+                borderTop: '0px',
+                borderLeft: '0px',
+                borderRight: '0px',
+                borderColor: color2,
+              }}
+              value={inputValue3}
+              onChange={this.handleChange}
+              maxLength="250"
+              name="inputValue3"
+              pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$"
+              required
+            />
+            <label htmlFor="dynamic-label-input" style={{ color: colorText2 }}>
+              Email ID
+            </label>
+          </div>
           <p className={s.tyP4} style={{ color: colorText3 }}>
             Country
           </p>
@@ -309,9 +308,9 @@ class Cjmp extends Component {
             type="button"
             // onClick={this.changeColor}
             onClick={this.changeColor}
-            // onClick={() => {
-            //   ReactDOM.findDOMNode(this.refs.myInput).focus();
-            // }}
+          // onClick={() => {
+          //   ReactDOM.findDOMNode(this.refs.myInput).focus();
+          // }}
           />
         </form>
       </div>
