@@ -44,11 +44,18 @@ class Cjmp extends Component {
     inputValue5: '',
     inputValue6: '',
     inputValue7: '',
+    isModalOpen: false,
   };
 
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value,
+    });
+  };
+
+  openModal = () => {
+    this.setState({
+      isModalOpen: true,
     });
   };
 
