@@ -1,34 +1,11 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/no-autofocus */
+/* eslint-disable react/no-string-refs */
+/* eslint-disable react/no-find-dom-node */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import s from './mmm.module.css';
-
-// const Cjmp = ({ butPrev, butNext }) => {
-//   const butPrevClass = butPrev ? s.disabled : s.buttom;
-//   const butNextClass = butNext ? s.disabled : s.buttom;
-
-//   handleClassArticle = () => {
-//     this.prevState(prevst\);
-//     return (
-//       <div className={s.ty}>
-//         <form>
-//           <input className={s.ty2} />
-//           <input className={s.ty3} />
-//           <input className={s.ty4} />
-//           <input className={s.ty5} />
-//           <input className={s.ty6} />
-//           <input className={s.ty7} />
-//           <button
-//             type="button"
-//             disabled={butNext}
-//             // onClick={this.changeColor}
-//             onClick={butNext ? null : butNextClass}
-//             className={s.ty4}
-//           />
-//         </form>
-//       </div>
-//     );
-//   };
 
 const green = '#39D1B4';
 const none = '#FFFFFF';
@@ -84,7 +61,7 @@ class Cjmp extends Component {
     inputValue4: '',
     inputValue5: '',
     inputValue6: '',
-    inpitValue7: '',
+    inputValue7: '',
   };
 
   handleChange = e => {
@@ -316,11 +293,8 @@ class Cjmp extends Component {
       colorText3,
       color4,
       colorText4,
-      color5,
       colorText5,
-      color6,
       colorText6,
-      color7,
       colorText7,
       color8,
       colorText8,
@@ -329,6 +303,8 @@ class Cjmp extends Component {
       inputValue2,
       inputValue3,
       selectData,
+      selectData1,
+      selectData2,
       inputValue4,
       inputValue5,
       inputValue6,
@@ -456,7 +432,7 @@ class Cjmp extends Component {
             className={s.select}
             ref="myInput7"
             options={options1}
-            value={findOpt(selectData)}
+            value={findOpt(selectData1)}
             onChange={this.onChangeSelect}
             style={{
               border: none,
@@ -470,7 +446,7 @@ class Cjmp extends Component {
             className={s.select}
             ref="myInput8"
             options={options2}
-            value={findOpt(selectData)}
+            value={findOpt(selectData2)}
             onChange={this.onChangeSelect}
             style={{
               border: none,
@@ -520,42 +496,7 @@ class Cjmp extends Component {
               Reference Code
             </label>
           </div>
-          {/* <input
-            className={s.ty5}
-            style={{
-              borderTop: '0px',
-              borderLeft: '0px',
-              borderRight: '0px',
-              borderColor: color4,
-            }}
-          />
-          <input
-            className={s.ty6}
-            style={{
-              borderTop: '0px',
-              borderLeft: '0px',
-              borderRight: '0px',
-              borderColor: color5,
-            }}
-          />
-          <input
-            className={s.ty7}
-            style={{
-              borderTop: '0px',
-              borderLeft: '0px',
-              borderRight: '0px',
-              borderColor: color6,
-            }}
-          />{' '} */}{' '}
-          */}
-          <button
-            type="button"
-            // onClick={this.changeColor}
-            onClick={this.changeColor}
-            // onClick={() => {
-            //   ReactDOM.findDOMNode(this.refs.myInput).focus();
-            // }}
-          />
+          <button type="button" onClick={this.changeColor} />
         </form>
       </div>
     );

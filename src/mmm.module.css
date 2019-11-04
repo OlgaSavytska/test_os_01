@@ -110,7 +110,7 @@ select::-ms-expand {
 label {
     position: absolute;
     top: 0px;
-    width: 76px;
+    width: 120px;
     left: 1px;
     opacity: 1;
     transform: translateY(0);
