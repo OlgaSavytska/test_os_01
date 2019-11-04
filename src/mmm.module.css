@@ -127,5 +127,5 @@ label {
 
 input:focus~label {
     top: -40px;
-    color: blueviolet;
+    color: gray;
 }

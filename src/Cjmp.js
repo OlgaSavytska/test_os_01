@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/no-autofocus */
 /* eslint-disable react/no-string-refs */
@@ -7,9 +8,7 @@ import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import s from './mmm.module.css';
 
-const green = '#39D1B4';
 const none = '#FFFFFF';
-const grey = '#A9A9A9';
 
 const options = [
   { value: 'India', label: 'India' },
@@ -35,24 +34,6 @@ const findOpt = value => options.find(opt => opt.value === value);
 
 class Cjmp extends Component {
   state = {
-    color1: green,
-    colorText1: green,
-    color2: none,
-    colorText2: grey,
-    color3: none,
-    colorText3: grey,
-    color4: none,
-    colorText4: grey,
-    color5: none,
-    colorText5: grey,
-    color6: none,
-    colorText6: grey,
-    color7: none,
-    colorText7: grey,
-    color8: none,
-    colorText8: grey,
-    color9: none,
-    colorText9: grey,
     inputValue2: '',
     inputValue3: '',
     selectData: '',
@@ -102,208 +83,48 @@ class Cjmp extends Component {
     findDOMNode,
   ) => {
     if (this.state.color1 !== none && this.state.inputValue2 !== true) {
-      this.setState({
-        color1: none,
-        colorText1: grey,
-        color2: green,
-        colorText2: green,
-        color3: none,
-        colorText3: grey,
-        color4: none,
-        colorText4: grey,
-        color5: none,
-        colorText5: grey,
-        color6: none,
-        colorText6: grey,
-        color7: none,
-        colorText7: grey,
-        color8: none,
-        colorText8: grey,
-        color9: none,
-        colorText9: grey,
-      });
       ReactDOM.findDOMNode(this.refs.myInput3).focus();
     }
-    if (this.state.color2 !== none) {
-      this.setState({
-        color1: none,
-        colorText1: grey,
-        color2: none,
-        colorText2: grey,
-        color3: green,
-        colorText3: green,
-        color4: none,
-        colorText4: grey,
-        color5: none,
-        colorText5: grey,
-        color6: none,
-        colorText6: grey,
-        color7: none,
-        colorText7: grey,
-        color8: none,
-        colorText8: grey,
-        color9: none,
-        colorText9: grey,
-      });
+    if (this.state.color2 !== none && this.state.inputValue3 !== true) {
       ReactDOM.findDOMNode(this.refs.myInput4).focus();
     }
-    if (this.state.color3 !== none) {
-      this.setState({
-        color1: none,
-        colorText1: grey,
-        color2: none,
-        colorText2: grey,
-        color3: none,
-        colorText3: grey,
-        color4: green,
-        colorText4: green,
-        color5: none,
-        colorText5: grey,
-        color6: none,
-        colorText6: grey,
-        color7: none,
-        colorText7: grey,
-        color8: none,
-        colorText8: grey,
-        color9: none,
-        colorText9: grey,
-      });
+    if (this.state.color3 !== none && this.state.inputValue4 !== true) {
       ReactDOM.findDOMNode(this.refs.myInput5).focus();
     }
-    if (this.state.color4 !== none) {
-      this.setState({
-        color1: none,
-        colorText1: grey,
-        color2: none,
-        colorText2: grey,
-        color3: none,
-        colorText3: grey,
-        color4: none,
-        colorText4: grey,
-        color5: green,
-        colorText5: green,
-        color6: none,
-        colorText6: grey,
-        color7: none,
-        colorText7: grey,
-        color8: none,
-        colorText8: grey,
-        color9: none,
-        colorText9: grey,
-      });
+    if (this.state.color4 !== none && this.state.inputValue5 !== true) {
       ReactDOM.findDOMNode(this.refs.myInput6).focus();
     }
-    if (this.state.color5 !== none) {
-      this.setState({
-        color1: none,
-        colorText1: grey,
-        color2: none,
-        colorText2: grey,
-        color3: none,
-        colorText3: grey,
-        color4: none,
-        colorText4: grey,
-        color5: none,
-        colorText5: grey,
-        color6: green,
-        colorText6: green,
-        color7: none,
-        colorText7: grey,
-        color8: none,
-        colorText8: grey,
-        color9: none,
-        colorText9: grey,
-      });
+    if (this.state.color5 !== none && this.state.inputValue6 !== true) {
       ReactDOM.findDOMNode(this.refs.myInput7).focus();
     }
-    if (this.state.color6 !== none) {
-      this.setState({
-        color1: none,
-        colorText1: grey,
-        color2: none,
-        colorText2: grey,
-        color3: none,
-        colorText3: grey,
-        color4: none,
-        colorText4: grey,
-        color5: none,
-        colorText5: grey,
-        color6: none,
-        colorText6: grey,
-        color7: green,
-        colorText7: green,
-        color8: none,
-        colorText8: grey,
-        color9: none,
-        colorText9: grey,
-      });
+    if (this.state.color6 !== none && this.state.inputValue7 !== true) {
       ReactDOM.findDOMNode(this.refs.myInput8).focus();
     }
-    if (this.state.color7 !== none) {
-      this.setState({
-        color1: none,
-        colorText1: grey,
-        color2: none,
-        colorText2: grey,
-        color3: none,
-        colorText3: grey,
-        color4: none,
-        colorText4: grey,
-        color5: none,
-        colorText5: grey,
-        color6: none,
-        colorText6: grey,
-        color7: none,
-        colorText7: grey,
-        color8: green,
-        colorText8: green,
-        color9: none,
-        colorText9: grey,
-      });
+    if (this.state.color7 !== none && this.state.inputValue8 !== true) {
       ReactDOM.findDOMNode(this.refs.myInput9).focus();
     }
-    if (this.state.color8 !== none) {
-      this.setState({
-        color1: none,
-        colorText1: grey,
-        color2: none,
-        colorText2: grey,
-        color3: none,
-        colorText3: grey,
-        color4: none,
-        colorText4: grey,
-        color5: none,
-        colorText5: grey,
-        color6: none,
-        colorText6: grey,
-        color7: none,
-        colorText7: grey,
-        color8: grey,
-        colorText8: grey,
-        color9: green,
-        colorText9: green,
-      });
+    if (this.state.color8 !== none && this.state.inputValue9 !== true) {
       ReactDOM.findDOMNode(this.refs.myInput10).focus();
     }
   };
 
   render() {
     const {
-      color1,
-      colorText1,
-      color2,
-      colorText2,
-      color3,
-      colorText3,
-      color4,
-      colorText4,
-      colorText5,
-      colorText6,
-      colorText7,
-      color8,
-      colorText8,
-      color9,
-      colorText9,
+      // color1,
+      // colorText1,
+      // color2,
+      // colorText2,
+      // color3,
+      // colorText3,
+      // color4,
+      // colorText4,
+      // colorText5,
+      // colorText6,
+      // colorText7,
+      // color8,
+      // colorText8,
+      // color9,
+      // colorText9,
       inputValue2,
       inputValue3,
       selectData,
@@ -341,12 +162,6 @@ class Cjmp extends Component {
               placeholder=" "
               type="text"
               ref="myInput3"
-              style={{
-                borderTop: '0px',
-                borderLeft: '0px',
-                borderRight: '0px',
-                borderColor: color2,
-              }}
               value={inputValue3}
               onChange={this.handleChange}
               minLength="2"
@@ -355,9 +170,7 @@ class Cjmp extends Component {
               pattern="[а-яёА-ЯЁ]+"
               required
             />
-            <label htmlFor="dynamic-label-input" style={{ color: colorText2 }}>
-              Last name
-            </label>
+            <label htmlFor="dynamic-label-input">Last name</label>
           </div>
           <div className={s.form_group}>
             <input
@@ -365,12 +178,6 @@ class Cjmp extends Component {
               placeholder=" "
               type="text"
               ref="myInput4"
-              style={{
-                borderTop: '0px',
-                borderLeft: '0px',
-                borderRight: '0px',
-                borderColor: color3,
-              }}
               value={inputValue4}
               onChange={this.handleChange}
               maxLength="250"
@@ -378,9 +185,7 @@ class Cjmp extends Component {
               pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$"
               required
             />
-            <label htmlFor="dynamic-label-input" style={{ color: colorText3 }}>
-              Email ID
-            </label>
+            <label htmlFor="dynamic-label-input">Email ID</label>
           </div>
           <div className={s.form_group}>
             <input
@@ -388,12 +193,6 @@ class Cjmp extends Component {
               placeholder=" "
               type="text"
               ref="myInput5"
-              style={{
-                borderTop: '0px',
-                borderLeft: '0px',
-                borderRight: '0px',
-                borderColor: color4,
-              }}
               value={inputValue5}
               onChange={this.handleChange}
               minLength="5"
@@ -402,13 +201,9 @@ class Cjmp extends Component {
               pattern="^[A-Za-z_]+$"
               required
             />
-            <label htmlFor="dynamic-label-input" style={{ color: colorText4 }}>
-              User ID
-            </label>
+            <label htmlFor="dynamic-label-input">User ID</label>
           </div>
-          <p className={s.tyP4} style={{ color: colorText5 }}>
-            Country
-          </p>
+          <p className={s.tyP4}>Country</p>
           <Select
             required
             className={s.select}
@@ -416,13 +211,9 @@ class Cjmp extends Component {
             options={options}
             value={findOpt(selectData)}
             onChange={this.onChangeSelect}
-            style={{
-              border: none,
-            }}
+            required
           />
-          <p className={s.tyP4} style={{ color: colorText6 }}>
-            State
-          </p>
+          <p className={s.tyP4}>State</p>
           <Select
             required
             className={s.select}
@@ -430,13 +221,9 @@ class Cjmp extends Component {
             options={options1}
             value={findOpt(selectData1)}
             onChange={this.onChangeSelect}
-            style={{
-              border: none,
-            }}
+            required
           />
-          <p className={s.tyP4} style={{ color: colorText7 }}>
-            City
-          </p>
+          <p className={s.tyP4}>City</p>
           <Select
             required
             className={s.select}
@@ -444,21 +231,13 @@ class Cjmp extends Component {
             options={options2}
             value={findOpt(selectData2)}
             onChange={this.onChangeSelect}
-            style={{
-              border: none,
-            }}
+            required
           />
           <div className={s.form_group}>
             <input
               className={s.ty6}
               placeholder=" "
               ref="myInput9"
-              style={{
-                borderTop: '0px',
-                borderLeft: '0px',
-                borderRight: '0px',
-                borderColor: color8,
-              }}
               value={inputValue6}
               onChange={this.handleChange}
               type="tel"
@@ -466,21 +245,13 @@ class Cjmp extends Component {
               pattern="380[0-9]{9}"
               required
             />
-            <label htmlFor="dynamic-label-input" style={{ color: colorText8 }}>
-              Phone Number
-            </label>
+            <label htmlFor="dynamic-label-input">Phone Number</label>
           </div>
           <div className={s.form_group}>
             <input
               className={s.ty7}
               placeholder=" "
               ref="myInput10"
-              style={{
-                borderTop: '0px',
-                borderLeft: '0px',
-                borderRight: '0px',
-                borderColor: color9,
-              }}
               value={inputValue7}
               onChange={this.handleChange}
               type="text"
@@ -488,9 +259,7 @@ class Cjmp extends Component {
               pattern="^[A-Za-z_0-9]+$"
               required
             />
-            <label htmlFor="dynamic-label-input" style={{ color: colorText9 }}>
-              Reference Code
-            </label>
+            <label htmlFor="dynamic-label-input">Reference Code</label>
           </div>
           <button type="submit" onClick={this.changeColor} />
         </form>
