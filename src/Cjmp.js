@@ -4,10 +4,10 @@
 /* eslint-disable react/no-string-refs */
 /* eslint-disable react/no-find-dom-node */
 import React, { Component } from 'react';
+import Modal from 'react-modal';
 import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import s from './mmm.module.css';
-import Modal from './Modal';
 
 const none = '#FFFFFF';
 
@@ -44,7 +44,7 @@ class Cjmp extends Component {
     inputValue5: '',
     inputValue6: '',
     inputValue7: '',
-    isModalOpen: false,
+    modalIsOpen: false,
   };
 
   handleChange = e => {
@@ -54,10 +54,18 @@ class Cjmp extends Component {
   };
 
   openModal = () => {
-    this.setState({
-      isModalOpen: true,
-    });
+    this.setState({ modalIsOpen: true });
   };
+
+  closeModal = () => {
+    this.setState({ modalIsOpen: false });
+  };
+
+  // openModal = () => {
+  //   this.setState({
+  //     isModalOpen: true,
+  //   });
+  // };
 
   onChangeSelect = opt => {
     this.setState({
@@ -271,7 +279,20 @@ class Cjmp extends Component {
             />
             <label htmlFor="dynamic-label-input">Reference Code</label>
           </div>
-          <button type="button" onClick={() => openModal(Modal)} />
+          <button type="button" onClick={this.openModal}>
+            Open Modal
+          </button>
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onRequestClose={this.closeModal}
+            contentLabel="Example Modal"
+          >
+            <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
+            <button type="button" onClick={this.closeModal}>
+              close
+            </button>
+            <div>I am a modal</div>
+          </Modal>
           <button type="submit" onClick={this.changeColor} />
         </form>
       </div>
