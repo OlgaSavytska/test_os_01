@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import s from './mmm.module.css';
 
@@ -75,7 +76,6 @@ class Cjmp extends Component {
   changeColor = (
     color1,
     colorText1,
-    focus1,
     color2,
     colorText2,
     color3,
@@ -84,6 +84,7 @@ class Cjmp extends Component {
     colorText4,
     color5,
     color6,
+    findDOMNode,
   ) => {
     if (this.state.color1 !== none) {
       this.setState({
@@ -98,6 +99,7 @@ class Cjmp extends Component {
         color5: none,
         color6: none,
       });
+      ReactDOM.findDOMNode(this.refs.myInput3).focus();
     }
     if (this.state.color2 !== none) {
       this.setState({
@@ -112,6 +114,7 @@ class Cjmp extends Component {
         color5: none,
         color6: none,
       });
+      ReactDOM.findDOMNode(this.refs.myInput4).focus();
     }
     if (this.state.color3 !== none) {
       this.setState({
@@ -126,6 +129,7 @@ class Cjmp extends Component {
         color5: none,
         color6: none,
       });
+      ReactDOM.findDOMNode(this.refs.myInput5).focus();
     }
     if (this.state.color4 !== none) {
       this.setState({
@@ -177,7 +181,6 @@ class Cjmp extends Component {
       colorText1,
       color2,
       colorText2,
-      color3,
       colorText3,
       color4,
       colorText4,
@@ -197,6 +200,7 @@ class Cjmp extends Component {
           <div className="s.form-group">
             <input
               className={s.ty2}
+              ref="myInput2"
               placeholder="Chandan"
               style={{
                 borderTop: '0px',
@@ -213,6 +217,7 @@ class Cjmp extends Component {
               pattern="[а-яёА-ЯЁ]+"
               id="dynamic-label-input"
               required
+              autoFocus
             />
             <label htmlFor="dynamic-label-input" style={{ color: colorText1 }}>
               Enter some text
@@ -225,6 +230,7 @@ class Cjmp extends Component {
             className={s.ty3}
             placeholder="chandan@codias.com"
             type="text"
+            ref="myInput3"
             style={{
               borderTop: '0px',
               borderLeft: '0px',
@@ -244,6 +250,7 @@ class Cjmp extends Component {
           <Select
             required
             className={s.select}
+            ref="myInput4"
             options={options}
             value={findOpt(selectData)}
             onChange={this.onChangeSelect}
@@ -257,6 +264,7 @@ class Cjmp extends Component {
           <input
             className={s.ty4}
             placeholder="380..."
+            ref="myInput5"
             style={{
               borderTop: '0px',
               borderLeft: '0px',
@@ -301,7 +309,9 @@ class Cjmp extends Component {
             type="button"
             // onClick={this.changeColor}
             onClick={this.changeColor}
-            className={s.ty4}
+            // onClick={() => {
+            //   ReactDOM.findDOMNode(this.refs.myInput).focus();
+            // }}
           />
         </form>
       </div>
