@@ -76,6 +76,14 @@ input:invalid:not(:focus):not(:placeholder-shown)~label {
     top: -20px;
 }
 
+input:focus::placeholder {
+    border: blueviolet 3px solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+
+}
+
 /* .select {
     margin: 50px;
     width: 150px;
@@ -119,4 +127,5 @@ label {
 
 input:focus~label {
     top: -40px;
+    color: blueviolet;
 }

@@ -76,6 +76,10 @@ class Cjmp extends Component {
     });
   };
 
+  handleSublit = e => {
+    e.prevebtDefault();
+  };
+
   changeColor = (
     color1,
     colorText1,
@@ -97,7 +101,7 @@ class Cjmp extends Component {
     colotText9,
     findDOMNode,
   ) => {
-    if (this.state.color1 !== none) {
+    if (this.state.color1 !== none && this.state.inputValue2 !== true) {
       this.setState({
         color1: none,
         colorText1: grey,
@@ -318,12 +322,6 @@ class Cjmp extends Component {
               className={s.ty2}
               ref="myInput2"
               placeholder=" "
-              style={{
-                borderTop: '0px',
-                borderLeft: '0px',
-                borderRight: '0px',
-                borderColor: color1,
-              }}
               value={inputValue2}
               onChange={this.handleChange}
               type="text"
@@ -335,9 +333,7 @@ class Cjmp extends Component {
               required
               autoFocus
             />
-            <label htmlFor="dynamic-label-input" style={{ color: colorText1 }}>
-              First name
-            </label>
+            <label htmlFor="dynamic-label-input">First name</label>
           </div>
           <div className={s.form_group}>
             <input
@@ -496,7 +492,7 @@ class Cjmp extends Component {
               Reference Code
             </label>
           </div>
-          <button type="button" onClick={this.changeColor} />
+          <button type="submit" onClick={this.changeColor} />
         </form>
       </div>
     );
