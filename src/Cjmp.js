@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import s from './mmm.module.css';
+import Modal from './Modal';
 
 const none = '#FFFFFF';
 
@@ -134,6 +135,8 @@ class Cjmp extends Component {
       inputValue5,
       inputValue6,
       inputValue7,
+      required,
+      openModal,
     } = this.state;
     return (
       <div className={s.ty}>
@@ -205,33 +208,33 @@ class Cjmp extends Component {
           </div>
           <p className={s.tyP4}>Country</p>
           <Select
-            required
             className={s.select}
             ref="myInput6"
             options={options}
             value={findOpt(selectData)}
             onChange={this.onChangeSelect}
-            required
+            required={required}
+            autoComplete="off"
           />
           <p className={s.tyP4}>State</p>
           <Select
-            required
             className={s.select}
             ref="myInput7"
             options={options1}
             value={findOpt(selectData1)}
             onChange={this.onChangeSelect}
-            required
+            required={required}
+            autoComplete="off"
           />
           <p className={s.tyP4}>City</p>
           <Select
-            required
             className={s.select}
             ref="myInput8"
             options={options2}
             value={findOpt(selectData2)}
             onChange={this.onChangeSelect}
-            required
+            required={required}
+            autoComplete="off"
           />
           <div className={s.form_group}>
             <input
@@ -261,6 +264,7 @@ class Cjmp extends Component {
             />
             <label htmlFor="dynamic-label-input">Reference Code</label>
           </div>
+          <button type="button" onClick={() => openModal(Modal)} />
           <button type="submit" onClick={this.changeColor} />
         </form>
       </div>
