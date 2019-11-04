@@ -40,8 +40,21 @@ const options = [
   { value: 'France', label: 'France' },
   { value: 'UK', label: 'UK' },
 ];
+const options1 = [
+  { value: 'Maharashtra', label: 'Maharashtra' },
+  { value: 'Kyiv', label: 'Kyiv' },
+  { value: 'Paris', label: 'Paris' },
+  { value: 'London', label: 'London' },
+];
+const options2 = [
+  { value: 'Delhi', label: 'Delhi' },
+  { value: 'Kyiv', label: 'Kyiv' },
+  { value: 'Paris', label: 'Paris' },
+  { value: 'London', label: 'London' },
+];
 
 const findOpt = value => options.find(opt => opt.value === value);
+// const findOpt1 = value => options1.find(opt => opt.value === value);
 
 class Cjmp extends Component {
   state = {
@@ -54,12 +67,21 @@ class Cjmp extends Component {
     color4: none,
     colorText4: grey,
     color5: none,
+    colorText5: grey,
     color6: none,
+    colorText6: grey,
+    color7: none,
+    colorText7: grey,
+    color8: none,
+    colorText8: grey,
     inputValue2: '',
     inputValue3: '',
     selectData: '',
+    selectData1: '',
+    selectData2: '',
     inputValue4: '',
     inputValue5: '',
+    inputValue6: '',
   };
 
   handleChange = e => {
@@ -84,7 +106,13 @@ class Cjmp extends Component {
     color4,
     colorText4,
     color5,
+    colorText5,
     color6,
+    colorText6,
+    color7,
+    colorText7,
+    color8,
+    colorText8,
     findDOMNode,
   ) => {
     if (this.state.color1 !== none) {
@@ -98,7 +126,13 @@ class Cjmp extends Component {
         color4: none,
         colorText4: grey,
         color5: none,
+        colorText5: grey,
         color6: none,
+        colorText6: grey,
+        color7: none,
+        colorText7: grey,
+        color8: none,
+        colorText8: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput3).focus();
     }
@@ -113,7 +147,13 @@ class Cjmp extends Component {
         color4: none,
         colorText4: grey,
         color5: none,
+        colorText5: grey,
         color6: none,
+        colorText6: grey,
+        color7: none,
+        colorText7: grey,
+        color8: none,
+        colorText8: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput4).focus();
     }
@@ -128,7 +168,13 @@ class Cjmp extends Component {
         color4: green,
         colorText4: green,
         color5: none,
+        colorText5: grey,
         color6: none,
+        colorText6: grey,
+        color7: none,
+        colorText7: grey,
+        color8: none,
+        colorText8: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput5).focus();
     }
@@ -143,8 +189,15 @@ class Cjmp extends Component {
         color4: none,
         colorText4: grey,
         color5: green,
+        colorText5: green,
         color6: none,
+        colorText6: grey,
+        color7: none,
+        colorText7: grey,
+        color8: none,
+        colorText8: grey,
       });
+      ReactDOM.findDOMNode(this.refs.myInput6).focus();
     }
     if (this.state.color5 !== none) {
       this.setState({
@@ -157,8 +210,15 @@ class Cjmp extends Component {
         color4: none,
         colorText4: grey,
         color5: none,
+        colorText5: grey,
         color6: green,
+        colorText6: green,
+        color7: none,
+        colorText7: grey,
+        color8: none,
+        colorText8: grey,
       });
+      ReactDOM.findDOMNode(this.refs.myInput7).focus();
     }
     if (this.state.color6 !== none) {
       this.setState({
@@ -171,8 +231,36 @@ class Cjmp extends Component {
         color4: none,
         colorText4: grey,
         color5: none,
+        colorText5: grey,
         color6: none,
+        colorText6: grey,
+        color7: green,
+        colorText7: green,
+        color8: none,
+        colorText8: grey,
       });
+      ReactDOM.findDOMNode(this.refs.myInput8).focus();
+    }
+    if (this.state.color7 !== none) {
+      this.setState({
+        color1: none,
+        colorText1: grey,
+        color2: none,
+        colorText2: grey,
+        color3: none,
+        colorText3: grey,
+        color4: none,
+        colorText4: grey,
+        color5: none,
+        colorText5: grey,
+        color6: none,
+        colorText6: grey,
+        color7: none,
+        colorText7: grey,
+        color8: green,
+        colorText8: green,
+      });
+      ReactDOM.findDOMNode(this.refs.myInput9).focus();
     }
   };
 
@@ -187,12 +275,19 @@ class Cjmp extends Component {
       color4,
       colorText4,
       color5,
+      colorText5,
       color6,
+      colorText6,
+      color7,
+      colorText7,
+      color8,
+      colorText8,
       inputValue2,
       inputValue3,
       selectData,
       inputValue4,
       inputValue5,
+      inputValue6,
     } = this.state;
     return (
       <div className={s.ty}>
@@ -294,13 +389,13 @@ class Cjmp extends Component {
               User ID
             </label>
           </div>
-          <p className={s.tyP4} style={{ color: colorText3 }}>
+          <p className={s.tyP4} style={{ color: colorText5 }}>
             Country
           </p>
-          {/* <Select
+          <Select
             required
             className={s.select}
-            ref="myInput4"
+            ref="myInput6"
             options={options}
             value={findOpt(selectData)}
             onChange={this.onChangeSelect}
@@ -308,27 +403,57 @@ class Cjmp extends Component {
               border: none,
             }}
           />
-          <p className={s.tyP4} style={{ color: colorText4 }}>
-            Phone Number
+          <p className={s.tyP4} style={{ color: colorText6 }}>
+            State
           </p>
-          <input
-            className={s.ty4}
-            placeholder="380..."
-            ref="myInput5"
-            style={{
-              borderTop: '0px',
-              borderLeft: '0px',
-              borderRight: '0px',
-              borderColor: color4,
-            }}
-            value={inputValue4}
-            onChange={this.handleChange}
-            type="tel"
-            name="inputValue4"
-            pattern="380[0-9]{9}"
+          <Select
             required
+            className={s.select}
+            ref="myInput7"
+            options={options1}
+            value={findOpt(selectData)}
+            onChange={this.onChangeSelect}
+            style={{
+              border: none,
+            }}
           />
-          <input
+          <p className={s.tyP4} style={{ color: colorText7 }}>
+            City
+          </p>
+          <Select
+            required
+            className={s.select}
+            ref="myInput8"
+            options={options2}
+            value={findOpt(selectData)}
+            onChange={this.onChangeSelect}
+            style={{
+              border: none,
+            }}
+          />
+          <div className={s.form_group}>
+            <input
+              className={s.ty6}
+              placeholder="380..."
+              ref="myInput9"
+              style={{
+                borderTop: '0px',
+                borderLeft: '0px',
+                borderRight: '0px',
+                borderColor: color8,
+              }}
+              value={inputValue6}
+              onChange={this.handleChange}
+              type="tel"
+              name="inputValue6"
+              pattern="380[0-9]{9}"
+              required
+            />
+            <label htmlFor="dynamic-label-input" style={{ color: colorText8 }}>
+              Phone Number
+            </label>
+          </div>
+          {/* <input
             className={s.ty5}
             style={{
               borderTop: '0px',
@@ -354,14 +479,14 @@ class Cjmp extends Component {
               borderRight: '0px',
               borderColor: color6,
             }}
-          /> */}
+          />{' '} */} */}
           <button
             type="button"
             // onClick={this.changeColor}
             onClick={this.changeColor}
-            // onClick={() => {
-            //   ReactDOM.findDOMNode(this.refs.myInput).focus();
-            // }}
+          // onClick={() => {
+          //   ReactDOM.findDOMNode(this.refs.myInput).focus();
+          // }}
           />
         </form>
       </div>
