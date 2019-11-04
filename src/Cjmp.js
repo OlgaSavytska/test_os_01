@@ -74,6 +74,8 @@ class Cjmp extends Component {
     colorText7: grey,
     color8: none,
     colorText8: grey,
+    color9: none,
+    colorText9: grey,
     inputValue2: '',
     inputValue3: '',
     selectData: '',
@@ -82,6 +84,7 @@ class Cjmp extends Component {
     inputValue4: '',
     inputValue5: '',
     inputValue6: '',
+    inpitValue7: '',
   };
 
   handleChange = e => {
@@ -113,6 +116,8 @@ class Cjmp extends Component {
     colorText7,
     color8,
     colorText8,
+    color9,
+    colotText9,
     findDOMNode,
   ) => {
     if (this.state.color1 !== none) {
@@ -133,6 +138,8 @@ class Cjmp extends Component {
         colorText7: grey,
         color8: none,
         colorText8: grey,
+        color9: none,
+        colorText9: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput3).focus();
     }
@@ -154,6 +161,8 @@ class Cjmp extends Component {
         colorText7: grey,
         color8: none,
         colorText8: grey,
+        color9: none,
+        colorText9: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput4).focus();
     }
@@ -175,6 +184,8 @@ class Cjmp extends Component {
         colorText7: grey,
         color8: none,
         colorText8: grey,
+        color9: none,
+        colorText9: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput5).focus();
     }
@@ -196,6 +207,8 @@ class Cjmp extends Component {
         colorText7: grey,
         color8: none,
         colorText8: grey,
+        color9: none,
+        colorText9: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput6).focus();
     }
@@ -217,6 +230,8 @@ class Cjmp extends Component {
         colorText7: grey,
         color8: none,
         colorText8: grey,
+        color9: none,
+        colorText9: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput7).focus();
     }
@@ -238,6 +253,8 @@ class Cjmp extends Component {
         colorText7: green,
         color8: none,
         colorText8: grey,
+        color9: none,
+        colorText9: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput8).focus();
     }
@@ -259,8 +276,33 @@ class Cjmp extends Component {
         colorText7: grey,
         color8: green,
         colorText8: green,
+        color9: none,
+        colorText9: grey,
       });
       ReactDOM.findDOMNode(this.refs.myInput9).focus();
+    }
+    if (this.state.color8 !== none) {
+      this.setState({
+        color1: none,
+        colorText1: grey,
+        color2: none,
+        colorText2: grey,
+        color3: none,
+        colorText3: grey,
+        color4: none,
+        colorText4: grey,
+        color5: none,
+        colorText5: grey,
+        color6: none,
+        colorText6: grey,
+        color7: none,
+        colorText7: grey,
+        color8: grey,
+        colorText8: grey,
+        color9: green,
+        colorText9: green,
+      });
+      ReactDOM.findDOMNode(this.refs.myInput10).focus();
     }
   };
 
@@ -282,12 +324,15 @@ class Cjmp extends Component {
       colorText7,
       color8,
       colorText8,
+      color9,
+      colorText9,
       inputValue2,
       inputValue3,
       selectData,
       inputValue4,
       inputValue5,
       inputValue6,
+      inputValue7,
     } = this.state;
     return (
       <div className={s.ty}>
@@ -434,7 +479,7 @@ class Cjmp extends Component {
           <div className={s.form_group}>
             <input
               className={s.ty6}
-              placeholder="380..."
+              placeholder=" "
               ref="myInput9"
               style={{
                 borderTop: '0px',
@@ -451,6 +496,28 @@ class Cjmp extends Component {
             />
             <label htmlFor="dynamic-label-input" style={{ color: colorText8 }}>
               Phone Number
+            </label>
+          </div>
+          <div className={s.form_group}>
+            <input
+              className={s.ty7}
+              placeholder=" "
+              ref="myInput10"
+              style={{
+                borderTop: '0px',
+                borderLeft: '0px',
+                borderRight: '0px',
+                borderColor: color9,
+              }}
+              value={inputValue7}
+              onChange={this.handleChange}
+              type="text"
+              name="inputValue7"
+              pattern="^[A-Za-z_0-9]+$"
+              required
+            />
+            <label htmlFor="dynamic-label-input" style={{ color: colorText9 }}>
+              Reference Code
             </label>
           </div>
           {/* <input
@@ -479,14 +546,15 @@ class Cjmp extends Component {
               borderRight: '0px',
               borderColor: color6,
             }}
-          />{' '} */} */}
+          />{' '} */}{' '}
+          */}
           <button
             type="button"
             // onClick={this.changeColor}
             onClick={this.changeColor}
-          // onClick={() => {
-          //   ReactDOM.findDOMNode(this.refs.myInput).focus();
-          // }}
+            // onClick={() => {
+            //   ReactDOM.findDOMNode(this.refs.myInput).focus();
+            // }}
           />
         </form>
       </div>
