@@ -1,10 +1,3 @@
-.ty {
-    /* background: url('./img/Rectangle1.png');
-    background-size: cover;
-    background-position: center; */
-
-}
-
 form {
     display: flex;
     flex-direction: row;
@@ -123,6 +116,7 @@ form {
     border-top: none;
     border-right: none;
     border-left: none;
+    position: relative;
 }
 
 /* .ty2::after,
@@ -258,4 +252,24 @@ input:focus~label {
     top: -40px;
     color: #48a5ea;
     font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.confirm {
+    margin-right: 72px;
+    background-color: #48a5ea;
+    padding: 10px 25px 10px 25px;
+    border-radius: 34px;
+    color: #ffffff;
+    border: none;
+}
+
+.resset {
+    color: #b8b8b8;
+    border: none;
 }

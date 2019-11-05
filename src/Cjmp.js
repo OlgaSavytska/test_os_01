@@ -372,32 +372,41 @@ class Cjmp extends Component {
                   <label htmlFor="dynamic-label-input">Reference Code</label>
                 </div>
               </div>
-              <button type="button" onClick={this.openModal}>
-                Open Modal
-              </button>
-              <Modal
-                isOpen={this.state.modalIsOpen}
-                onRequestClose={this.closeModal}
-                style={customStyles}
-              >
-                <h2 ref={subtitle => (this.subtitle = subtitle)}>
-                  Are you sure?
-                </h2>
+              <div className={s.buttons}>
                 <button
-                  onClick={this.deleteAll}
+                  className={s.resset}
                   type="button"
-                  className={s.b_deleteAll}
+                  onClick={this.openModal}
                 >
-                  Delete All
+                  Reset All
                 </button>
-                <button type="button" onClick={this.closeModal}>
-                  close
+                <Modal
+                  isOpen={this.state.modalIsOpen}
+                  onRequestClose={this.closeModal}
+                  style={customStyles}
+                >
+                  <h2 ref={subtitle => (this.subtitle = subtitle)}>
+                    Are you sure?
+                  </h2>
+                  <button
+                    onClick={this.deleteAll}
+                    type="button"
+                    className={s.b_deleteAll}
+                  >
+                    Reset All
+                  </button>
+                  <button type="button" onClick={this.closeModal}>
+                    Cansel
+                  </button>
+                </Modal>
+                <button
+                  className={s.confirm}
+                  type="submit"
+                  onClick={this.changeColor}
+                >
+                  Continue
                 </button>
-              </Modal>
-
-              <button type="submit" onClick={this.changeColor}>
-                Continue
-              </button>
+              </div>
             </div>
           </div>
         </form>
