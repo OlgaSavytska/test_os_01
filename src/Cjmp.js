@@ -108,52 +108,79 @@ class Cjmp extends Component {
     e.prevebtDefault();
   };
 
-  changeColor = (
-    color1,
-    colorText1,
-    color2,
-    colorText2,
-    color3,
-    colorText3,
-    color4,
-    colorText4,
-    color5,
-    colorText5,
-    color6,
-    colorText6,
-    color7,
-    colorText7,
-    color8,
-    colorText8,
-    color9,
-    colotText9,
-    findDOMNode,
-  ) => {
-    if (this.state.color1 !== none && this.state.inputValue2 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput3).focus();
-    }
-    if (this.state.color2 !== none && this.state.inputValue3 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput4).focus();
-    }
-    if (this.state.color3 !== none && this.state.inputValue4 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput5).focus();
-    }
-    if (this.state.color4 !== none && this.state.inputValue5 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput6).focus();
-    }
-    if (this.state.color5 !== none && this.state.inputValue6 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput7).focus();
-    }
-    if (this.state.color6 !== none && this.state.inputValue7 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput8).focus();
+  changeColorUp = () => {
+    if (this.state.color8 !== none && this.state.inputValue9 !== true) {
+      ReactDOM.findDOMNode(this.refs.myInput10).focus();
     }
     if (this.state.color7 !== none && this.state.inputValue8 !== true) {
       ReactDOM.findDOMNode(this.refs.myInput9).focus();
     }
-    if (this.state.color8 !== none && this.state.inputValue9 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput10).focus();
+    if (this.state.color6 !== none && this.state.inputValue7 !== true) {
+      ReactDOM.findDOMNode(this.refs.myInput8).focus();
+    }
+    if (this.state.color5 !== none && this.state.inputValue6 !== true) {
+      ReactDOM.findDOMNode(this.refs.myInput7).focus();
+    }
+    if (this.state.color4 !== none && this.state.inputValue5 !== true) {
+      ReactDOM.findDOMNode(this.refs.myInput6).focus();
+    }
+    if (this.state.color3 !== none && this.state.inputValue4 !== true) {
+      ReactDOM.findDOMNode(this.refs.myInput5).focus();
+    }
+    if (this.state.color2 !== none && this.state.inputValue3 !== true) {
+      ReactDOM.findDOMNode(this.refs.myInput4).focus();
+    }
+    if (this.state.color1 !== none && this.state.inputValue2 !== true) {
+      ReactDOM.findDOMNode(this.refs.myInput3).focus();
     }
   };
+
+  // changeColor = (
+  //   color1,
+  //   colorText1,
+  //   color2,
+  //   colorText2,
+  //   color3,
+  //   colorText3,
+  //   color4,
+  //   colorText4,
+  //   color5,
+  //   colorText5,
+  //   color6,
+  //   colorText6,
+  //   color7,
+  //   colorText7,
+  //   color8,
+  //   colorText8,
+  //   color9,
+  //   colotText9,
+  //   findDOMNode,
+  // ) => {
+  //   if (this.state.color1 !== none && this.state.inputValue2 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput3).focus();
+  //   }
+  //   if (this.state.color2 !== none && this.state.inputValue3 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput4).focus();
+  //   }
+  //   if (this.state.color3 !== none && this.state.inputValue4 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput5).focus();
+  //   }
+  //   if (this.state.color4 !== none && this.state.inputValue5 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput6).focus();
+  //   }
+  //   if (this.state.color5 !== none && this.state.inputValue6 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput7).focus();
+  //   }
+  //   if (this.state.color6 !== none && this.state.inputValue7 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput8).focus();
+  //   }
+  //   if (this.state.color7 !== none && this.state.inputValue8 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput9).focus();
+  //   }
+  //   if (this.state.color8 !== none && this.state.inputValue9 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput10).focus();
+  //   }
+  // };
 
   render() {
     const {
@@ -200,7 +227,6 @@ class Cjmp extends Component {
               pattern="[а-яёА-ЯЁ]+"
               id="dynamic-label-input"
               required
-              autoFocus
             />
             <label htmlFor="dynamic-label-input">First name</label>
           </div>
@@ -248,6 +274,7 @@ class Cjmp extends Component {
               name="inputValue5"
               pattern="^[A-Za-z_]+$"
               required
+              tabIndex="2"
             />
             <label htmlFor="dynamic-label-input">User ID</label>
           </div>
@@ -292,6 +319,7 @@ class Cjmp extends Component {
               name="inputValue6"
               pattern="380[0-9]{9}"
               required
+              id="2"
             />
             <label htmlFor="dynamic-label-input">Phone Number</label>
           </div>
@@ -306,8 +334,17 @@ class Cjmp extends Component {
               name="inputValue7"
               pattern="^[A-Za-z_0-9]+$"
               required
+              tabIndex="1"
             />
             <label htmlFor="dynamic-label-input">Reference Code</label>
+          </div>
+          <div className={s.sidebar}>
+            <button type="submit" onClick={this.changeColor}>
+              ContinueDown
+            </button>
+            <button type="submit" onClick={this.changeColorUp}>
+              ContinueUp
+            </button>
           </div>
           <button type="button" onClick={this.openModal}>
             Open Modal
@@ -329,7 +366,10 @@ class Cjmp extends Component {
               close
             </button>
           </Modal>
-          <button type="submit" onClick={this.changeColor} />
+
+          <button type="submit" onClick={this.changeColor}>
+            Continue
+          </button>
         </form>
       </div>
     );
