@@ -23,6 +23,7 @@ form {
     position: relative;
     margin: 0 auto;
     border: none;
+    margin: 30px;
 }
 
 .up::before {
@@ -30,7 +31,38 @@ form {
     content: url('./img/ArrowUp.png');
     margin: 0;
     display: block;
+}
 
+.up::after {
+    position: absolute;
+    content: url('./img/Top.png');
+    margin: 0;
+    display: block;
+    top: -11px;
+    right: -26px;
+}
+
+.down {
+    position: relative;
+    margin: 0 auto;
+    border: none;
+    margin: 30px;
+}
+
+.down::before {
+    position: absolute;
+    content: url('./img/ArrowDown.png');
+    margin: 0;
+    display: block;
+}
+
+.down::after {
+    position: absolute;
+    content: url('./img/Top.png');
+    margin: 0;
+    display: block;
+    top: -11px;
+    right: -26px;
 }
 
 .ty2,

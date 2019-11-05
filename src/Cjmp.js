@@ -214,14 +214,20 @@ class Cjmp extends Component {
       <div className={s.ty}>
         <form>
           <div className={s.sidebar}>
-            <button
-              className={s.up}
-              type="submit"
-              onClick={this.changeColorUp}
-            />
-            <button type="submit" onClick={this.changeColor}>
-              ContinueDown
-            </button>
+            <div className={s.upclass}>
+              <button
+                className={s.up}
+                type="submit"
+                onClick={this.changeColorUp}
+              />
+            </div>
+            <div className={s.downclass}>
+              <button
+                className={s.down}
+                type="submit"
+                onClick={this.changeColor}
+              />
+            </div>
           </div>
           <div className={s.form_group}>
             <input
