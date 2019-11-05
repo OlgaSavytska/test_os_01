@@ -273,3 +273,29 @@ input:focus~label {
     color: #b8b8b8;
     border: none;
 }
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 100px;
+    transform: translate(-50%, -50%);
+}
+
+.buttonModal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttonmmm {
+    border: none;
+}

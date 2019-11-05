@@ -388,16 +388,22 @@ class Cjmp extends Component {
                   <h2 ref={subtitle => (this.subtitle = subtitle)}>
                     Are you sure?
                   </h2>
-                  <button
-                    onClick={this.deleteAll}
-                    type="button"
-                    className={s.b_deleteAll}
-                  >
-                    Reset All
-                  </button>
-                  <button type="button" onClick={this.closeModal}>
-                    Cansel
-                  </button>
+                  <div className={s.buttonModal}>
+                    <button
+                      onClick={this.deleteAll}
+                      className={s.buttonmmm}
+                      type="button"
+                    >
+                      Reset All
+                    </button>
+                    <button
+                      className={s.buttonmmm}
+                      type="button"
+                      onClick={this.closeModal}
+                    >
+                      Cansel
+                    </button>
+                  </div>
                 </Modal>
                 <button
                   className={s.confirm}
