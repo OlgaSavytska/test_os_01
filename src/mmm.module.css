@@ -9,7 +9,6 @@
 form {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 .sidebar {
@@ -26,7 +25,7 @@ form {
 .title {
     color: #48a5ea;
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 85px;
 }
 
 .title::after {
@@ -47,7 +46,7 @@ form {
 
 .section {
     display: flex;
-    flex-direction: row wrap;
+    flex-direction: column;
 }
 
 .up {
@@ -96,6 +95,11 @@ form {
     right: -26px;
 }
 
+.inputsSection {
+    display: flex;
+    flex-direction: row;
+}
+
 .ty2,
 .ty3,
 .ty4,
@@ -103,7 +107,9 @@ form {
 .ty6,
 .ty7 {
     transition: 0.5s all ease;
-
+    margin-bottom: 90px;
+    margin-left: 30px;
+    width: 500px;
 }
 
 input::-webkit-input-placeholder {
@@ -175,18 +181,9 @@ input:focus::placeholder {
 
 }
 
-/* .select {
-    margin: 50px;
-    width: 150px;
-    padding: 5px 35px 5px 5px;
-    font-size: 16px;
-    border: 0px solid #CCC;
-    height: 34px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-} */
+.select {
+    margin-bottom: 90px;
+}
 
 
 /* CAUTION: Internet Explorer hackery ahead */
