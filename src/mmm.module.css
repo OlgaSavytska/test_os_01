@@ -106,11 +106,29 @@ form {
 .ty5,
 .ty6,
 .ty7 {
-    transition: 0.5s all ease;
     margin-bottom: 90px;
-    margin-left: 30px;
-    width: 500px;
+    margin-right: 80px;
+    width: 360px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
 }
+
+/* .ty2::after,
+.ty3::after,
+.ty4::after,
+.ty5::after,
+.ty6::after,
+.ty7::after {
+    content: '';
+    margin: 0px;
+    display: block;
+    background-color: #d8d8d8;
+    height: 1px;
+    width: 20px;
+    position: absolute;
+
+} */
 
 input::-webkit-input-placeholder {
     opacity: 1;
