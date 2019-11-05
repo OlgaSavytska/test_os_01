@@ -1,3 +1,5 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/no-autofocus */
@@ -46,6 +48,10 @@ class Cjmp extends Component {
     inputValue7: '',
     modalIsOpen: false,
   };
+
+  componentDidMount() {
+    Modal.setAppElement('body');
+  }
 
   handleChange = e => {
     this.setState({
@@ -151,7 +157,6 @@ class Cjmp extends Component {
       inputValue6,
       inputValue7,
       required,
-      openModal,
     } = this.state;
     return (
       <div className={s.ty}>
