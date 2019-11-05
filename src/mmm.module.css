@@ -1,8 +1,36 @@
 .ty {
-    margin: 30px;
+    /* background: url('./img/Rectangle1.png');
+    background-size: cover;
+    background-position: center; */
+    height: 750px;
+
+}
+
+form {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: space-between;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #48a5ea;
+}
+
+.up {
+    position: relative;
+    margin: 0 auto;
+    border: none;
+}
+
+.up::before {
+    position: absolute;
+    content: url('./img/ArrowUp.png');
+    margin: 0;
+    display: block;
+
 }
 
 .ty2,
@@ -107,11 +135,7 @@ select::-ms-expand {
 
 .form_group {
     position: relative;
-    /* padding-top: 1.5rem; */
-    margin: 100px;
-    background-color: red;
-    width: 30px;
-    height: 30px;
+
     display: block;
 }
 

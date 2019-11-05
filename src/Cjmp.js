@@ -213,6 +213,16 @@ class Cjmp extends Component {
     return (
       <div className={s.ty}>
         <form>
+          <div className={s.sidebar}>
+            <button
+              className={s.up}
+              type="submit"
+              onClick={this.changeColorUp}
+            />
+            <button type="submit" onClick={this.changeColor}>
+              ContinueDown
+            </button>
+          </div>
           <div className={s.form_group}>
             <input
               className={s.ty2}
@@ -338,14 +348,7 @@ class Cjmp extends Component {
             />
             <label htmlFor="dynamic-label-input">Reference Code</label>
           </div>
-          <div className={s.sidebar}>
-            <button type="submit" onClick={this.changeColor}>
-              ContinueDown
-            </button>
-            <button type="submit" onClick={this.changeColorUp}>
-              ContinueUp
-            </button>
-          </div>
+
           <button type="button" onClick={this.openModal}>
             Open Modal
           </button>
