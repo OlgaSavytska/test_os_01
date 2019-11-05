@@ -99,6 +99,18 @@ form {
     flex-direction: row;
 }
 
+.inputsSectionSelect {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.formClose {
+    display: flex;
+    flex-direction: row;
+    margin-left: 79px;
+}
+
 .ty2,
 .ty3,
 .ty4,
@@ -205,6 +217,12 @@ input:focus {
 
 .select {
     margin-bottom: 90px;
+    width: 360px;
+}
+
+.select1 {
+    margin-bottom: 90px;
+    width: 150px;
 }
 
 
@@ -218,6 +236,12 @@ select::-ms-expand {
 .form_group {
     position: relative;
     display: block;
+}
+
+.form_group1 {
+    position: relative;
+    display: block;
+    margin-right: 63px;
 }
 
 label {

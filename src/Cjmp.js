@@ -301,37 +301,45 @@ class Cjmp extends Component {
                   <label htmlFor="dynamic-label-input">User ID</label>
                 </div>
               </div>
-              <div className={s.inputsSection}>
-                <p className={s.tyP4}>Country</p>
-                <Select
-                  className={s.select}
-                  ref="myInput6"
-                  options={options}
-                  value={findOpt(selectData)}
-                  onChange={this.onChangeSelect}
-                  required={required}
-                  autoComplete="off"
-                />
-                <p className={s.tyP4}>State</p>
-                <Select
-                  className={s.select}
-                  ref="myInput7"
-                  options={options1}
-                  value={findOpt(selectData1)}
-                  onChange={this.onChangeSelect}
-                  required={required}
-                  autoComplete="off"
-                />
-                <p className={s.tyP4}>City</p>
-                <Select
-                  className={s.select}
-                  ref="myInput8"
-                  options={options2}
-                  value={findOpt(selectData2)}
-                  onChange={this.onChangeSelect}
-                  required={required}
-                  autoComplete="off"
-                />
+              <div className={s.inputsSectionSelect}>
+                <div className={s.form_group}>
+                  <p className={s.tyP4}>Country</p>
+                  <Select
+                    className={s.select}
+                    ref="myInput6"
+                    options={options}
+                    value={findOpt(selectData)}
+                    onChange={this.onChangeSelect}
+                    required={required}
+                    autoComplete="off"
+                  />
+                </div>
+                <div className={s.formClose}>
+                  <div className={s.form_group1}>
+                    <p className={s.tyP4}>State</p>
+                    <Select
+                      className={s.select1}
+                      ref="myInput7"
+                      options={options1}
+                      value={findOpt(selectData1)}
+                      onChange={this.onChangeSelect}
+                      required={required}
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div className={s.form_group}>
+                    <p className={s.tyP4}>City</p>
+                    <Select
+                      className={s.select1}
+                      ref="myInput8"
+                      options={options2}
+                      value={findOpt(selectData2)}
+                      onChange={this.onChangeSelect}
+                      required={required}
+                      autoComplete="off"
+                    />
+                  </div>
+                </div>
               </div>
               <div className={s.inputsSection}>
                 <div className={s.form_group}>
