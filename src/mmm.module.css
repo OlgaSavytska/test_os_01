@@ -17,6 +17,16 @@ form {
     flex-direction: column;
     justify-content: space-around;
     background-color: #48a5ea;
+    padding: 30px;
+}
+
+.title {
+    color: #48a5ea;
+}
+
+.section {
+    display: flex;
+    flex-direction: row wrap;
 }
 
 .up {

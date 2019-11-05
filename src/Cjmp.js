@@ -229,156 +229,162 @@ class Cjmp extends Component {
               />
             </div>
           </div>
-          <div className={s.form_group}>
-            <input
-              className={s.ty2}
-              ref="myInput2"
-              placeholder=" "
-              value={inputValue2}
-              onChange={this.handleChange}
-              type="text"
-              minLength="2"
-              maxLength="50"
-              name="inputValue2"
-              pattern="[а-яёА-ЯЁ]+"
-              id="dynamic-label-input"
-              required
-            />
-            <label htmlFor="dynamic-label-input">First name</label>
-          </div>
-          <div className={s.form_group}>
-            <input
-              className={s.ty3}
-              placeholder=" "
-              type="text"
-              ref="myInput3"
-              value={inputValue3}
-              onChange={this.handleChange}
-              minLength="2"
-              maxLength="50"
-              name="inputValue3"
-              pattern="[а-яёА-ЯЁ]+"
-              required
-            />
-            <label htmlFor="dynamic-label-input">Last name</label>
-          </div>
-          <div className={s.form_group}>
-            <input
-              className={s.ty4}
-              placeholder=" "
-              type="text"
-              ref="myInput4"
-              value={inputValue4}
-              onChange={this.handleChange}
-              maxLength="250"
-              name="inputValue4"
-              pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$"
-              required
-            />
-            <label htmlFor="dynamic-label-input">Email ID</label>
-          </div>
-          <div className={s.form_group}>
-            <input
-              className={s.ty5}
-              placeholder=" "
-              type="text"
-              ref="myInput5"
-              value={inputValue5}
-              onChange={this.handleChange}
-              minLength="5"
-              maxLength="30"
-              name="inputValue5"
-              pattern="^[A-Za-z_]+$"
-              required
-              tabIndex="2"
-            />
-            <label htmlFor="dynamic-label-input">User ID</label>
-          </div>
-          <p className={s.tyP4}>Country</p>
-          <Select
-            className={s.select}
-            ref="myInput6"
-            options={options}
-            value={findOpt(selectData)}
-            onChange={this.onChangeSelect}
-            required={required}
-            autoComplete="off"
-          />
-          <p className={s.tyP4}>State</p>
-          <Select
-            className={s.select}
-            ref="myInput7"
-            options={options1}
-            value={findOpt(selectData1)}
-            onChange={this.onChangeSelect}
-            required={required}
-            autoComplete="off"
-          />
-          <p className={s.tyP4}>City</p>
-          <Select
-            className={s.select}
-            ref="myInput8"
-            options={options2}
-            value={findOpt(selectData2)}
-            onChange={this.onChangeSelect}
-            required={required}
-            autoComplete="off"
-          />
-          <div className={s.form_group}>
-            <input
-              className={s.ty6}
-              placeholder=" "
-              ref="myInput9"
-              value={inputValue6}
-              onChange={this.handleChange}
-              type="tel"
-              name="inputValue6"
-              pattern="380[0-9]{9}"
-              required
-              id="2"
-            />
-            <label htmlFor="dynamic-label-input">Phone Number</label>
-          </div>
-          <div className={s.form_group}>
-            <input
-              className={s.ty7}
-              placeholder=" "
-              ref="myInput10"
-              value={inputValue7}
-              onChange={this.handleChange}
-              type="text"
-              name="inputValue7"
-              pattern="^[A-Za-z_0-9]+$"
-              required
-              tabIndex="1"
-            />
-            <label htmlFor="dynamic-label-input">Reference Code</label>
-          </div>
+          <div className={s.titlediv}>
+            <h1 className={s.title}>Basic Details</h1>
 
-          <button type="button" onClick={this.openModal}>
-            Open Modal
-          </button>
-          <Modal
-            isOpen={this.state.modalIsOpen}
-            onRequestClose={this.closeModal}
-            style={customStyles}
-          >
-            <h2 ref={subtitle => (this.subtitle = subtitle)}>Are you sure?</h2>
-            <button
-              onClick={this.deleteAll}
-              type="button"
-              className={s.b_deleteAll}
-            >
-              Delete All
-            </button>
-            <button type="button" onClick={this.closeModal}>
-              close
-            </button>
-          </Modal>
+            <div className={s.section}>
+              <div className={s.form_group}>
+                <input
+                  className={s.ty2}
+                  ref="myInput2"
+                  placeholder=" "
+                  value={inputValue2}
+                  onChange={this.handleChange}
+                  type="text"
+                  minLength="2"
+                  maxLength="50"
+                  name="inputValue2"
+                  pattern="[а-яёА-ЯЁ]+"
+                  id="dynamic-label-input"
+                  required
+                />
+                <label htmlFor="dynamic-label-input">First name</label>
+              </div>
+              <div className={s.form_group}>
+                <input
+                  className={s.ty3}
+                  placeholder=" "
+                  type="text"
+                  ref="myInput3"
+                  value={inputValue3}
+                  onChange={this.handleChange}
+                  minLength="2"
+                  maxLength="50"
+                  name="inputValue3"
+                  pattern="[а-яёА-ЯЁ]+"
+                  required
+                />
+                <label htmlFor="dynamic-label-input">Last name</label>
+              </div>
+              <div className={s.form_group}>
+                <input
+                  className={s.ty4}
+                  placeholder=" "
+                  type="text"
+                  ref="myInput4"
+                  value={inputValue4}
+                  onChange={this.handleChange}
+                  maxLength="250"
+                  name="inputValue4"
+                  pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$"
+                  required
+                />
+                <label htmlFor="dynamic-label-input">Email ID</label>
+              </div>
+              <div className={s.form_group}>
+                <input
+                  className={s.ty5}
+                  placeholder=" "
+                  type="text"
+                  ref="myInput5"
+                  value={inputValue5}
+                  onChange={this.handleChange}
+                  minLength="5"
+                  maxLength="30"
+                  name="inputValue5"
+                  pattern="^[A-Za-z_]+$"
+                  required
+                />
+                <label htmlFor="dynamic-label-input">User ID</label>
+              </div>
+              <p className={s.tyP4}>Country</p>
+              <Select
+                className={s.select}
+                ref="myInput6"
+                options={options}
+                value={findOpt(selectData)}
+                onChange={this.onChangeSelect}
+                required={required}
+                autoComplete="off"
+              />
+              <p className={s.tyP4}>State</p>
+              <Select
+                className={s.select}
+                ref="myInput7"
+                options={options1}
+                value={findOpt(selectData1)}
+                onChange={this.onChangeSelect}
+                required={required}
+                autoComplete="off"
+              />
+              <p className={s.tyP4}>City</p>
+              <Select
+                className={s.select}
+                ref="myInput8"
+                options={options2}
+                value={findOpt(selectData2)}
+                onChange={this.onChangeSelect}
+                required={required}
+                autoComplete="off"
+              />
+              <div className={s.form_group}>
+                <input
+                  className={s.ty6}
+                  placeholder=" "
+                  ref="myInput9"
+                  value={inputValue6}
+                  onChange={this.handleChange}
+                  type="tel"
+                  name="inputValue6"
+                  pattern="380[0-9]{9}"
+                  required
+                  id="2"
+                />
+                <label htmlFor="dynamic-label-input">Phone Number</label>
+              </div>
+              <div className={s.form_group}>
+                <input
+                  className={s.ty7}
+                  placeholder=" "
+                  ref="myInput10"
+                  value={inputValue7}
+                  onChange={this.handleChange}
+                  type="text"
+                  name="inputValue7"
+                  pattern="^[A-Za-z_0-9]+$"
+                  required
+                />
+                <label htmlFor="dynamic-label-input">Reference Code</label>
+              </div>
 
-          <button type="submit" onClick={this.changeColor}>
-            Continue
-          </button>
+              <button type="button" onClick={this.openModal}>
+                Open Modal
+              </button>
+              <Modal
+                isOpen={this.state.modalIsOpen}
+                onRequestClose={this.closeModal}
+                style={customStyles}
+              >
+                <h2 ref={subtitle => (this.subtitle = subtitle)}>
+                  Are you sure?
+                </h2>
+                <button
+                  onClick={this.deleteAll}
+                  type="button"
+                  className={s.b_deleteAll}
+                >
+                  Delete All
+                </button>
+                <button type="button" onClick={this.closeModal}>
+                  close
+                </button>
+              </Modal>
+
+              <button type="submit" onClick={this.changeColor}>
+                Continue
+              </button>
+            </div>
+          </div>
         </form>
       </div>
     );
