@@ -12,6 +12,16 @@ import Select from 'react-select';
 import s from './mmm.module.css';
 
 const none = '#FFFFFF';
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 
 const options = [
   { value: 'India', label: 'India' },
@@ -65,6 +75,21 @@ class Cjmp extends Component {
 
   closeModal = () => {
     this.setState({ modalIsOpen: false });
+  };
+
+  deleteAll = () => {
+    this.setState({
+      inputValue2: '',
+      inputValue3: '',
+      selectData: '',
+      selectData1: '',
+      selectData2: '',
+      inputValue4: '',
+      inputValue5: '',
+      inputValue6: '',
+      inputValue7: '',
+      modalIsOpen: false,
+    });
   };
 
   // openModal = () => {
@@ -290,13 +315,19 @@ class Cjmp extends Component {
           <Modal
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}
-            contentLabel="Example Modal"
+            style={customStyles}
           >
-            <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
+            <h2 ref={subtitle => (this.subtitle = subtitle)}>Are you sure?</h2>
+            <button
+              onClick={this.deleteAll}
+              type="button"
+              className={s.b_deleteAll}
+            >
+              Delete All
+            </button>
             <button type="button" onClick={this.closeModal}>
               close
             </button>
-            <div>I am a modal</div>
           </Modal>
           <button type="submit" onClick={this.changeColor} />
         </form>
