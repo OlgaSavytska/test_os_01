@@ -2,7 +2,6 @@
     /* background: url('./img/Rectangle1.png');
     background-size: cover;
     background-position: center; */
-    height: 750px;
 
 }
 
@@ -175,9 +174,12 @@ input:hover::-ms-input-placeholder {
     color: black;
 }
 
-input:valid:not(:focus):not(:placeholder-shown) {
-    color: #94cf4b;
+input {
+    outline: none;
 }
+
+
+input:valid:not(:focus):not(:placeholder-shown)::after {}
 
 input:invalid:not(:focus):not(:placeholder-shown) {
     color: #ff3561;
@@ -185,18 +187,20 @@ input:invalid:not(:focus):not(:placeholder-shown) {
 
 input:valid:not(:focus):not(:placeholder-shown)~label {
     top: -20px;
+    color: #b6b6b6;
 }
 
 input:invalid:not(:focus):not(:placeholder-shown)~label {
     top: -20px;
+    color: #ff3561
 }
 
-input:focus::placeholder {
-    border: blueviolet 3px solid;
+
+input:focus {
+    border: #48a5ea 1px solid;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-
 }
 
 .select {
@@ -213,13 +217,12 @@ select::-ms-expand {
 
 .form_group {
     position: relative;
-
     display: block;
 }
 
 label {
     position: absolute;
-    top: 0px;
+    top: -11px;
     width: 120px;
     left: 1px;
     opacity: 1;
@@ -229,5 +232,6 @@ label {
 
 input:focus~label {
     top: -40px;
-    color: gray;
+    color: #48a5ea;
+    font-size: 15px;
 }
