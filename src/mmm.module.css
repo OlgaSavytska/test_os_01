@@ -1,3 +1,7 @@
+.ty {
+    overflow: hidden;
+}
+
 form {
     display: flex;
     flex-direction: row;
@@ -347,4 +351,96 @@ input:focus~label {
 
 .buttonmmm {
     border: none;
+}
+
+.buttons1 {
+    display: none;
+}
+
+@media (max-width:768px) {
+    form {
+        flex-direction: column-reverse;
+        /* align-items: center; */
+    }
+
+    .section {
+        align-items: center;
+    }
+
+    .sidebar {
+        background-image: none;
+        background-color: #48a5ea;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0px;
+        height: 72px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 11;
+    }
+
+    .sidebar::after {
+        display: none;
+    }
+
+    .inputsSection,
+    .inputsSectionSelect {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title::after {
+        max-width: 300px;
+    }
+
+    .formClose {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .buttons1 {
+
+        display: flex;
+    }
+
+
+    .ty2,
+    .ty3,
+    .ty4,
+    .ty5,
+    .ty6,
+    .ty7 {
+        margin-right: 0;
+    }
+
+    .form_group2::after {
+        right: 1px;
+    }
+
+    .confirm {
+        margin-right: 0;
+        padding: 5px 10px 5px 10px;
+        margin-left: 14px;
+        margin-top: 5px;
+        color: #ffffff;
+        background-color: #48a5ea;
+        border: 1px #ffffff solid;
+    }
+
+    .resset {
+        margin-right: 0;
+        padding: 5px 10px 5px 10px;
+        margin-top: 5px;
+        color: #ffffff;
+        background-color: #48a5ea;
+        border: 1px #ffffff solid;
+        border-radius: 34px;
+    }
+
 }

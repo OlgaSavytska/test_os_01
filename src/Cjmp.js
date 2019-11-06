@@ -14,7 +14,7 @@ import s from './mmm.module.css';
 const none = '#FFFFFF';
 const customStyles = {
   content: {
-    top: '50%',
+    top: '34%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
@@ -220,6 +220,47 @@ class Cjmp extends Component {
                 type="submit"
                 onClick={this.changeColorUp}
               />
+            </div>
+            <div className={s.buttons1}>
+              <button
+                className={s.resset}
+                type="button"
+                onClick={this.openModal}
+              >
+                Reset All
+              </button>
+              <Modal
+                isOpen={this.state.modalIsOpen}
+                onRequestClose={this.closeModal}
+                style={customStyles}
+              >
+                <h2 ref={subtitle => (this.subtitle = subtitle)}>
+                  Are you sure?
+                </h2>
+                <div className={s.buttonModal}>
+                  <button
+                    onClick={this.deleteAll}
+                    className={s.buttonmmm}
+                    type="button"
+                  >
+                    Reset All
+                  </button>
+                  <button
+                    className={s.buttonmmm}
+                    type="button"
+                    onClick={this.closeModal}
+                  >
+                    Cansel
+                  </button>
+                </div>
+              </Modal>
+              <button
+                className={s.confirm}
+                type="submit"
+                onClick={this.changeColor}
+              >
+                Continue
+              </button>
             </div>
             <div className={s.downclass}>
               <button
