@@ -12,6 +12,15 @@ form {
     padding-bottom: 51px;
     padding-left: 80px;
     padding-right: 60px;
+    position: relative;
+}
+
+.sidebar::after {
+    content: url('./img/water.png');
+    margin: 0;
+    display: block;
+    position: absolute;
+    left: 97px;
 }
 
 .title {
@@ -187,7 +196,7 @@ input {
 }
 
 input:placeholder-shown {
-    height: 20px;
+    height: 28px;
 }
 
 
@@ -196,16 +205,23 @@ input:placeholder-shown {
 }
 
 
+
 input:valid:not(:focus):not(:placeholder-shown) {
     background-image: url('./img/checkmark.png');
     background-repeat: no-repeat;
-    background-position-x: 300px;
-    background-position-y: -5px;
+    background-position-x: 327px;
+    background-position-y: 5px;
+    background-size: 15px;
 }
 
 
 input:invalid:not(:focus):not(:placeholder-shown) {
     color: #ff3561;
+    background-image: url('./img/cross.png');
+    background-repeat: no-repeat;
+    background-position-x: 327px;
+    background-position-y: 5px;
+    background-size: 15px;
 }
 
 input:valid:not(:focus):not(:placeholder-shown)~label {
