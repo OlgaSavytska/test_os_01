@@ -265,6 +265,20 @@ select::-ms-expand {
     display: block;
 }
 
+.form_group2 {
+    position: relative;
+    display: block;
+}
+
+.form_group2::after {
+    content: url('./img/key.png');
+    margin: 0;
+    display: block;
+    position: absolute;
+    right: 76px;
+    top: 0;
+}
+
 
 .form_group1 {
     position: relative;

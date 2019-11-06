@@ -231,7 +231,6 @@ class Cjmp extends Component {
           </div>
           <div className={s.titlediv}>
             <h1 className={s.title}>Basic Details</h1>
-
             <div className={s.section}>
               <div className={s.inputsSection}>
                 <div className={s.form_group}>
@@ -284,7 +283,7 @@ class Cjmp extends Component {
                   />
                   <label htmlFor="dynamic-label-input">Email ID</label>
                 </div>
-                <div className={s.form_group}>
+                <div className={s.form_group2}>
                   <input
                     className={s.ty5}
                     placeholder=" "
