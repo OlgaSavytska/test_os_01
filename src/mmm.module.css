@@ -118,6 +118,7 @@ form {
     border-right: none;
     border-left: none;
     position: relative;
+    height: 28px;
 }
 
 /* .ty2::after,
@@ -185,8 +186,23 @@ input {
     outline: none;
 }
 
+input:placeholder-shown {
+    height: 20px;
+}
 
-input:valid:not(:focus):not(:placeholder-shown)::after {}
+
+.form_group:valid::after {
+    opacity: 0;
+}
+
+
+input:valid:not(:focus):not(:placeholder-shown) {
+    background-image: url('./img/checkmark.png');
+    background-repeat: no-repeat;
+    background-position-x: 300px;
+    background-position-y: -5px;
+}
+
 
 input:invalid:not(:focus):not(:placeholder-shown) {
     color: #ff3561;
@@ -233,6 +249,7 @@ select::-ms-expand {
     display: block;
 }
 
+
 .form_group1 {
     position: relative;
     display: block;
@@ -254,6 +271,7 @@ input:focus~label {
     color: #48a5ea;
     font-size: 15px;
 }
+
 
 .buttons {
     display: flex;
