@@ -43,7 +43,6 @@ const options2 = [
 ];
 
 const findOpt = value => options.find(opt => opt.value === value);
-// const findOpt1 = value => options1.find(opt => opt.value === value);
 
 class Cjmp extends Component {
   state = {
@@ -92,12 +91,6 @@ class Cjmp extends Component {
     });
   };
 
-  // openModal = () => {
-  //   this.setState({
-  //     isModalOpen: true,
-  //   });
-  // };
-
   onChangeSelect = opt => {
     this.setState({
       selectData: opt.value,
@@ -135,70 +128,8 @@ class Cjmp extends Component {
     }
   };
 
-  // changeColor = (
-  //   color1,
-  //   colorText1,
-  //   color2,
-  //   colorText2,
-  //   color3,
-  //   colorText3,
-  //   color4,
-  //   colorText4,
-  //   color5,
-  //   colorText5,
-  //   color6,
-  //   colorText6,
-  //   color7,
-  //   colorText7,
-  //   color8,
-  //   colorText8,
-  //   color9,
-  //   colotText9,
-  //   findDOMNode,
-  // ) => {
-  //   if (this.state.color1 !== none && this.state.inputValue2 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput3).focus();
-  //   }
-  //   if (this.state.color2 !== none && this.state.inputValue3 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput4).focus();
-  //   }
-  //   if (this.state.color3 !== none && this.state.inputValue4 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput5).focus();
-  //   }
-  //   if (this.state.color4 !== none && this.state.inputValue5 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput6).focus();
-  //   }
-  //   if (this.state.color5 !== none && this.state.inputValue6 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput7).focus();
-  //   }
-  //   if (this.state.color6 !== none && this.state.inputValue7 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput8).focus();
-  //   }
-  //   if (this.state.color7 !== none && this.state.inputValue8 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput9).focus();
-  //   }
-  //   if (this.state.color8 !== none && this.state.inputValue9 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput10).focus();
-  //   }
-  // };
-
   render() {
     const {
-      // color1,
-      // colorText1,
-      // color2,
-      // colorText2,
-      // color3,
-      // colorText3,
-      // color4,
-      // colorText4,
-      // colorText5,
-      // colorText6,
-      // colorText7,
-      // color8,
-      // colorText8,
-      // color9,
-      // colorText9,
       inputValue2,
       inputValue3,
       selectData,
@@ -250,7 +181,7 @@ class Cjmp extends Component {
                     type="button"
                     onClick={this.closeModal}
                   >
-                    Cansel
+                    Cancel
                   </button>
                 </div>
               </Modal>

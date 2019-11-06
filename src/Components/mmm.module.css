@@ -11,7 +11,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-image: url('./img/Background.png');
+    background-image: url('../img/Background.png');
     background-size: cover;
     padding-bottom: 51px;
     padding-left: 80px;
@@ -20,7 +20,7 @@ form {
 }
 
 .sidebar::after {
-    content: url('./img/water.png');
+    content: url('../img/water.png');
     margin: 0;
     display: block;
     position: absolute;
@@ -64,14 +64,14 @@ form {
 
 .up::before {
     position: absolute;
-    content: url('./img/ArrowUp.png');
+    content: url('../img/ArrowUp.png');
     margin: 0;
     display: block;
 }
 
 .up::after {
     position: absolute;
-    content: url('./img/Top.png');
+    content: url('../img/Top.png');
     margin: 0;
     display: block;
     top: -11px;
@@ -87,14 +87,14 @@ form {
 
 .down::before {
     position: absolute;
-    content: url('./img/ArrowDown.png');
+    content: url('../img/ArrowDown.png');
     margin: 0;
     display: block;
 }
 
 .down::after {
     position: absolute;
-    content: url('./img/Top.png');
+    content: url('../img/Top.png');
     margin: 0;
     display: block;
     top: -11px;
@@ -133,22 +133,6 @@ form {
     position: relative;
     height: 28px;
 }
-
-/* .ty2::after,
-.ty3::after,
-.ty4::after,
-.ty5::after,
-.ty6::after,
-.ty7::after {
-    content: '';
-    margin: 0px;
-    display: block;
-    background-color: #d8d8d8;
-    height: 1px;
-    width: 20px;
-    position: absolute;
-
-} */
 
 input::-webkit-input-placeholder {
     opacity: 1;
@@ -209,9 +193,8 @@ input:placeholder-shown {
 }
 
 
-
 input:valid:not(:focus):not(:placeholder-shown) {
-    background-image: url('./img/checkmark.png');
+    background-image: url('../img/checkmark.png');
     background-repeat: no-repeat;
     background-position-x: 327px;
     background-position-y: 5px;
@@ -221,7 +204,7 @@ input:valid:not(:focus):not(:placeholder-shown) {
 
 input:invalid:not(:focus):not(:placeholder-shown) {
     color: #ff3561;
-    background-image: url('./img/cross.png');
+    background-image: url('../img/cross.png');
     background-repeat: no-repeat;
     background-position-x: 327px;
     background-position-y: 5px;
@@ -237,7 +220,6 @@ input:invalid:not(:focus):not(:placeholder-shown)~label {
     top: -20px;
     color: #ff3561
 }
-
 
 input:focus {
     border: #48a5ea 1px solid;
@@ -256,10 +238,6 @@ input:focus {
     width: 150px;
 }
 
-
-/* CAUTION: Internet Explorer hackery ahead */
-
-
 select::-ms-expand {
     display: none;
 }
@@ -275,7 +253,7 @@ select::-ms-expand {
 }
 
 .form_group2::after {
-    content: url('./img/key.png');
+    content: url('../img/key.png');
     margin: 0;
     display: block;
     position: absolute;
