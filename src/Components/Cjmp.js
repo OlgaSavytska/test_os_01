@@ -1,15 +1,25 @@
-/* eslint-disable no-return-assign */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/jsx-no-duplicate-props */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable jsx-a11y/no-autofocus */
-/* eslint-disable react/no-string-refs */
-/* eslint-disable react/no-find-dom-node */
+// /* eslint-disable no-return-assign */
+// /* eslint-disable react/destructuring-assignment */
+// /* eslint-disable react/jsx-no-duplicate-props */
+// /* eslint-disable jsx-a11y/label-has-associated-control */
+// /* eslint-disable jsx-a11y/no-autofocus */
+// /* eslint-disable react/no-string-refs */
+// /* eslint-disable react/no-find-dom-node */
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import ReactDOM from 'react-dom';
-import Select from 'react-select';
+// import Select from 'react-select';
+import BaseSelect from 'react-select';
 import s from './mmm.module.css';
+import FixRequiredSelect from './Fix';
+
+const Select = props => (
+  <FixRequiredSelect
+    {...props}
+    SelectComponent={BaseSelect}
+    options={props.options || options}
+  />
+);
 
 const none = '#FFFFFF';
 const customStyles = {
@@ -89,6 +99,7 @@ class Cjmp extends Component {
       inputValue7: '',
       modalIsOpen: false,
     });
+    this.selectRef = React.createRef();
   };
 
   onChangeSelect = opt => {
@@ -101,32 +112,32 @@ class Cjmp extends Component {
     e.prevebtDefault();
   };
 
-  changeColorUp = () => {
-    if (this.state.color8 !== none && this.state.inputValue9 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput10).focus();
-    }
-    if (this.state.color7 !== none && this.state.inputValue8 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput9).focus();
-    }
-    if (this.state.color6 !== none && this.state.inputValue7 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput8).focus();
-    }
-    if (this.state.color5 !== none && this.state.inputValue6 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput7).focus();
-    }
-    if (this.state.color4 !== none && this.state.inputValue5 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput6).focus();
-    }
-    if (this.state.color3 !== none && this.state.inputValue4 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput5).focus();
-    }
-    if (this.state.color2 !== none && this.state.inputValue3 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput4).focus();
-    }
-    if (this.state.color1 !== none && this.state.inputValue2 !== true) {
-      ReactDOM.findDOMNode(this.refs.myInput3).focus();
-    }
-  };
+  // changeColorUp = () => {
+  //   if (this.state.color8 !== none && this.state.inputValue9 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput10).focus();
+  //   }
+  //   if (this.state.color7 !== none && this.state.inputValue8 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput9).focus();
+  //   }
+  //   if (this.state.color6 !== none && this.state.inputValue7 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput8).focus();
+  //   }
+  //   if (this.state.color5 !== none && this.state.inputValue6 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput7).focus();
+  //   }
+  //   if (this.state.color4 !== none && this.state.inputValue5 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput6).focus();
+  //   }
+  //   if (this.state.color3 !== none && this.state.inputValue4 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput5).focus();
+  //   }
+  //   if (this.state.color2 !== none && this.state.inputValue3 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput4).focus();
+  //   }
+  //   if (this.state.color1 !== none && this.state.inputValue2 !== true) {
+  //     ReactDOM.findDOMNode(this.refs.myInput3).focus();
+  //   }
+  // };
 
   render() {
     const {
@@ -139,7 +150,6 @@ class Cjmp extends Component {
       inputValue5,
       inputValue6,
       inputValue7,
-      required,
     } = this.state;
     return (
       <div className={s.ty}>
@@ -277,12 +287,10 @@ class Cjmp extends Component {
                   <p className={s.tyP4}>Country</p>
                   <Select
                     className={s.select}
-                    ref="myInput6"
-                    options={options}
                     value={findOpt(selectData)}
+                    options={options}
                     onChange={this.onChangeSelect}
-                    required={required}
-                    autoComplete="off"
+                    required
                   />
                 </div>
                 <div className={s.formClose}>
@@ -290,24 +298,20 @@ class Cjmp extends Component {
                     <p className={s.tyP4}>State</p>
                     <Select
                       className={s.select1}
-                      ref="myInput7"
                       options={options1}
                       value={findOpt(selectData1)}
                       onChange={this.onChangeSelect}
-                      required={required}
-                      autoComplete="off"
+                      required
                     />
                   </div>
                   <div className={s.form_group}>
                     <p className={s.tyP4}>City</p>
                     <Select
                       className={s.select1}
-                      ref="myInput8"
                       options={options2}
                       value={findOpt(selectData2)}
                       onChange={this.onChangeSelect}
-                      required={required}
-                      autoComplete="off"
+                      required
                     />
                   </div>
                 </div>
@@ -393,3 +397,27 @@ class Cjmp extends Component {
 }
 
 export default Cjmp;
+
+// const options = [
+//   { value: 1, label: '1 - One' },
+//   { value: 2, label: '2 - Two' },
+//   { value: 3, label: '3 - Three' },
+// ];
+
+// export default class Cjmp extends React.Component {
+//   render() {
+//     return (
+//       <div className="container">
+//         <form>
+//           <div className="form-group">
+//             Select <i className="text-secondary">required</i> and no{' '}
+//             <code>value</code> prop set undefined
+//                 <Select value="" options={options} required />
+//           </div>
+//           <button className="btn btn-primary">Submit</button>
+//         </form>
+//       </div>
+
+//     );
+//   }
+// }
