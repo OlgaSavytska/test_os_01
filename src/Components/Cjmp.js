@@ -301,7 +301,7 @@ class Cjmp extends Component {
                     <p className={s.tyP4}>State</p>
                     <Select
                       styles={selectStyles2}
-                      className={s.select1}
+                      className={s.select}
                       options={options1}
                       value={findOpt(selectData1)}
                       onChange={this.onChangeSelect}
@@ -312,7 +312,7 @@ class Cjmp extends Component {
                     <p className={s.tyP4}>City</p>
                     <Select
                       styles={selectStyles2}
-                      className={s.select1}
+                      className={s.select}
                       options={options2}
                       value={findOpt(selectData2)}
                       onChange={this.onChangeSelect}

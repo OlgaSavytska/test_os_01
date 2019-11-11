@@ -231,6 +231,17 @@ input:focus {
 .select {
     margin-bottom: 90px;
     width: 360px;
+    position: relative;
+}
+
+.select::after {
+    content: url('../img/arrowBlackDown.png');
+    margin: 0;
+    display: block;
+    position: absolute;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .select1 {
