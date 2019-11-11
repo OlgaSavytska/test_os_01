@@ -12,6 +12,8 @@ import ReactDOM from 'react-dom';
 import BaseSelect from 'react-select';
 import s from './mmm.module.css';
 import FixRequiredSelect from './Fix';
+import selectStyles from './selectStyles';
+import selectStyles2 from './selectStyles2';
 
 const Select = props => (
   <FixRequiredSelect
@@ -286,6 +288,7 @@ class Cjmp extends Component {
                 <div className={s.form_group}>
                   <p className={s.tyP4}>Country</p>
                   <Select
+                    styles={selectStyles}
                     className={s.select}
                     value={findOpt(selectData)}
                     options={options}
@@ -297,6 +300,7 @@ class Cjmp extends Component {
                   <div className={s.form_group1}>
                     <p className={s.tyP4}>State</p>
                     <Select
+                      styles={selectStyles2}
                       className={s.select1}
                       options={options1}
                       value={findOpt(selectData1)}
@@ -307,6 +311,7 @@ class Cjmp extends Component {
                   <div className={s.form_group}>
                     <p className={s.tyP4}>City</p>
                     <Select
+                      styles={selectStyles2}
                       className={s.select1}
                       options={options2}
                       value={findOpt(selectData2)}
