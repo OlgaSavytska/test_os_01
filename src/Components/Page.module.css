@@ -61,6 +61,8 @@ form {
     border: none;
     margin: 30px;
     margin-bottom: 492px;
+    outline-style: none;
+    transition: 1s all ease-out;
 }
 
 .up::before {
@@ -68,6 +70,7 @@ form {
     content: url('../img/ArrowUp.png');
     margin: 0;
     display: block;
+
 }
 
 .up::after {
@@ -79,11 +82,19 @@ form {
     right: -26px;
 }
 
+button:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 .down {
     position: relative;
     margin: 0 auto;
     border: none;
     margin: 30px;
+    outline-style: none;
+    transition: 1s all ease-out;
 }
 
 .down::before {
@@ -301,6 +312,8 @@ input:focus~label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+
 }
 
 .confirm {
@@ -310,11 +323,15 @@ input:focus~label {
     border-radius: 34px;
     color: #ffffff;
     border: none;
+    outline-style: none;
+    transition: 1s all ease-out;
 }
 
 .resset {
     color: #b8b8b8;
     border: none;
+    outline-style: none;
+    transition: 1s all ease-out;
 }
 
 .modal {
@@ -454,5 +471,4 @@ input:focus~label {
         border: 1px #ffffff solid;
         border-radius: 34px;
     }
-
 }

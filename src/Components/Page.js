@@ -1,3 +1,8 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/no-string-refs */
 // /* eslint-disable no-return-assign */
 // /* eslint-disable react/destructuring-assignment */
 // /* eslint-disable react/jsx-no-duplicate-props */
@@ -7,10 +12,8 @@
 // /* eslint-disable react/no-find-dom-node */
 import React, { Component } from 'react';
 import Modal from 'react-modal';
-import ReactDOM from 'react-dom';
-// import Select from 'react-select';
 import BaseSelect from 'react-select';
-import s from './mmm.module.css';
+import s from './Page.module.css';
 import FixRequiredSelect from './Fix';
 import selectStyles from './selectStyles';
 import selectStyles2 from './selectStyles2';
@@ -23,7 +26,6 @@ const Select = props => (
   />
 );
 
-const none = '#FFFFFF';
 const customStyles = {
   content: {
     top: '34%',
@@ -56,7 +58,7 @@ const options2 = [
 
 const findOpt = value => options.find(opt => opt.value === value);
 
-class Cjmp extends Component {
+class Page extends Component {
   state = {
     inputValue2: '',
     inputValue3: '',
@@ -114,33 +116,6 @@ class Cjmp extends Component {
     e.prevebtDefault();
   };
 
-  // changeColorUp = () => {
-  //   if (this.state.color8 !== none && this.state.inputValue9 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput10).focus();
-  //   }
-  //   if (this.state.color7 !== none && this.state.inputValue8 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput9).focus();
-  //   }
-  //   if (this.state.color6 !== none && this.state.inputValue7 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput8).focus();
-  //   }
-  //   if (this.state.color5 !== none && this.state.inputValue6 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput7).focus();
-  //   }
-  //   if (this.state.color4 !== none && this.state.inputValue5 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput6).focus();
-  //   }
-  //   if (this.state.color3 !== none && this.state.inputValue4 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput5).focus();
-  //   }
-  //   if (this.state.color2 !== none && this.state.inputValue3 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput4).focus();
-  //   }
-  //   if (this.state.color1 !== none && this.state.inputValue2 !== true) {
-  //     ReactDOM.findDOMNode(this.refs.myInput3).focus();
-  //   }
-  // };
-
   render() {
     const {
       inputValue2,
@@ -177,9 +152,7 @@ class Cjmp extends Component {
                 onRequestClose={this.closeModal}
                 style={customStyles}
               >
-                <h2 ref={subtitle => (this.subtitle = subtitle)}>
-                  Are you sure?
-                </h2>
+                <h2>Are you sure?</h2>
                 <div className={s.buttonModal}>
                   <button
                     onClick={this.deleteAll}
@@ -347,6 +320,8 @@ class Cjmp extends Component {
                     type="text"
                     name="inputValue7"
                     pattern="^[A-Za-z_0-9]+$"
+                    minLength="10"
+                    maxLength="10"
                     required
                   />
                   <label htmlFor="dynamic-label-input">Reference Code</label>
@@ -365,9 +340,7 @@ class Cjmp extends Component {
                   onRequestClose={this.closeModal}
                   style={customStyles}
                 >
-                  <h2 ref={subtitle => (this.subtitle = subtitle)}>
-                    Are you sure?
-                  </h2>
+                  <h2>Are you sure?</h2>
                   <div className={s.buttonModal}>
                     <button
                       onClick={this.deleteAll}
@@ -401,28 +374,4 @@ class Cjmp extends Component {
   }
 }
 
-export default Cjmp;
-
-// const options = [
-//   { value: 1, label: '1 - One' },
-//   { value: 2, label: '2 - Two' },
-//   { value: 3, label: '3 - Three' },
-// ];
-
-// export default class Cjmp extends React.Component {
-//   render() {
-//     return (
-//       <div className="container">
-//         <form>
-//           <div className="form-group">
-//             Select <i className="text-secondary">required</i> and no{' '}
-//             <code>value</code> prop set undefined
-//                 <Select value="" options={options} required />
-//           </div>
-//           <button className="btn btn-primary">Submit</button>
-//         </form>
-//       </div>
-
-//     );
-//   }
-// }
+export default Page;

@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Cjmp from './Components/Cjmp';
+import Page from './Components/Page';
 
 const App = () => {
-  return <Cjmp />;
+  return <Page />;
 };
 
 export default App;
