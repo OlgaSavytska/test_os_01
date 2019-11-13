@@ -5,6 +5,7 @@
 form {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .sidebar {
@@ -46,7 +47,7 @@ form {
 
 .titlediv {
     padding-top: 30px;
-    padding-left: 30px;
+    margin: 0 auto;
 }
 
 .section {
@@ -344,6 +345,28 @@ input:focus~label {
 
 .buttons1 {
     display: none;
+}
+
+@media (max-width:1031px) {
+    .titlediv {
+        padding-left: 30px;
+    }
+
+    .inputsSection {
+        flex-flow: row wrap;
+    }
+
+    .inputsSectionSelect {
+        flex-flow: row wrap;
+    }
+
+    .formClose {
+        margin-left: 2px;
+    }
+
+    .select {
+        margin-right: 30px;
+    }
 }
 
 @media (max-width:768px) {
